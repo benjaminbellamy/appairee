@@ -47,15 +47,15 @@
     </p>
   </description>
 
-  <url type="homepage">https://github.com/benjaminbellamy/Appairee</url>
-  <url type="bugtracker">https://github.com/benjaminbellamy/Appairee/issues</url>
+  <url type="homepage">https://github.com/benjaminbellamy/appairee</url>
+  <url type="bugtracker">https://github.com/benjaminbellamy/appairee/issues</url>
   <!-- The dongle protocol this application is a front-end for. -->
   <url type="vcs-browser">https://github.com/sobalap/btd700ctl</url>
 
   <screenshots>
     <screenshot type="default">
       <caption>The status light, the two settings, and what the dongle reports</caption>
-      <image>https://raw.githubusercontent.com/benjaminbellamy/Appairee/main/data/screenshots/main-window.png</image>
+      <image>https://raw.githubusercontent.com/benjaminbellamy/appairee/main/data/screenshots/main-window.png</image>
     </screenshot>
   </screenshots>
 
