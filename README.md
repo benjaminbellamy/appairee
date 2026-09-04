@@ -71,17 +71,24 @@ curl -L -o /tmp/appairee.flatpak \
 
 ## Uninstalling
 
+### Debian and Ubuntu
+
 ```bash
-sudo apt remove appairee                              # Debian package
-flatpak uninstall --user fr.benjaminbellamy.Appairee  # Flatpak
+sudo apt remove appairee
 ```
 
-Removing the Debian package removes its udev rule with it. A rule you installed by
-hand for the Flatpak is yours, and stays until you delete it:
+The udev rule was installed by the package, so it goes with it.
+
+### Flatpak
 
 ```bash
-sudo rm /etc/udev/rules.d/99-btd700.rules
-sudo udevadm control --reload-rules
+flatpak uninstall --user fr.benjaminbellamy.Appairee
+```
+
+A udev rule you installed by hand is yours, and stays until you remove it:
+
+```bash
+sudo rm /etc/udev/rules.d/99-btd700.rules && sudo udevadm control --reload-rules
 ```
 
 ## Building from source
