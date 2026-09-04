@@ -48,15 +48,43 @@ language, and can be changed from the menu at any time without restarting.
 
 ### Debian and Ubuntu
 
-The package installs the udev rule Appairée needs, as root, at install time. Nothing
-to copy and nothing to configure: install it, plug in the dongle, done.
+Recommended. The package installs the udev rule Appairée needs, as root, at install
+time: install it, plug in the dongle, done. Nothing to copy and nothing to configure.
 
 ```bash
-./build-aux/deb/build-deb.sh
-sudo apt install ./build-deb/appairee_*.deb
+curl -L -o /tmp/appairee.deb \
+    https://github.com/benjaminbellamy/appairee/releases/download/1.0.0/appairee_1.0.0_amd64.deb \
+    && sudo apt install /tmp/appairee.deb
 ```
 
-### From source
+### Flatpak
+
+Any distribution, at the cost of the udev rule: a Flatpak cannot write to `/etc` or
+`/usr/lib`, so the rule has to be installed by hand. Appairée shows the exact command,
+with the right path already filled in, when it cannot reach the dongle.
+
+```bash
+curl -L -o /tmp/appairee.flatpak \
+    https://github.com/benjaminbellamy/appairee/releases/download/1.0.0/appairee-1.0.0.flatpak \
+    && flatpak install --user --bundle /tmp/appairee.flatpak
+```
+
+## Uninstalling
+
+```bash
+sudo apt remove appairee                              # Debian package
+flatpak uninstall --user fr.benjaminbellamy.Appairee  # Flatpak
+```
+
+Removing the Debian package removes its udev rule with it. A rule you installed by
+hand for the Flatpak is yours, and stays until you delete it:
+
+```bash
+sudo rm /etc/udev/rules.d/99-btd700.rules
+sudo udevadm control --reload-rules
+```
+
+## Building from source
 
 Needs `gtk4`, `libadwaita-1`, `hidapi-hidraw`, `blueprint-compiler` and `meson`.
 Nothing else — btd700ctl is built from the vendored copy under `src/btd700ctl/`.
@@ -70,17 +98,11 @@ sudo meson install -C build
 
 Leave `udev_rules_dir` unset for an uninstalled build; then see below.
 
-### Flatpak
-
-Builds and runs on any distribution, at the cost of the udev rule: a Flatpak cannot
-write to `/etc` or `/usr/lib`, so the rule has to be installed by hand. Appairée shows
-the exact command, with the right path already filled in, when it cannot reach the
-dongle.
+To build the packages instead:
 
 ```bash
-flatpak-builder --user --install --force-clean \
-    build-flatpak build-aux/flatpak/fr.benjaminbellamy.Appairee.yml
-flatpak run fr.benjaminbellamy.Appairee
+./build-aux/deb/build-deb.sh                 # a .deb, udev rule included
+./build-aux/flatpak/build-bundle.sh          # a single-file .flatpak bundle
 ```
 
 ## The udev rule

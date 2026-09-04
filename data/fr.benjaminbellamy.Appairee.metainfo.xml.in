@@ -88,9 +88,9 @@
   </requires>
 
   <releases>
-    <release version="0.1.0" date="2026-09-04">
+    <release version="1.0.0" date="2026-09-05">
       <description>
-        <p>First development release.</p>
+        <p>First release.</p>
       </description>
     </release>
   </releases>
