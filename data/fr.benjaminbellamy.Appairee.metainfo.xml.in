@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2026 Benjamin Bellamy -->
+<component type="desktop-application">
+  <id>fr.benjaminbellamy.Appairee</id>
+
+  <name>Appairée</name>
+  <summary>Control a Sennheiser BTD 700 Bluetooth dongle</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <developer id="fr.benjaminbellamy">
+    <name>Benjamin Bellamy</name>
+  </developer>
+
+  <description>
+    <p>
+      The Sennheiser BTD 700 needs no driver on Linux: it appears as an ordinary USB
+      sound card. What no Linux software can reach are the settings stored inside the
+      dongle itself, which Sennheiser exposes only through its Windows and macOS
+      Dongle Control application.
+    </p>
+    <p>
+      Appairée reaches them. Switch the dongle to gaming mode for low latency when you
+      are monitoring audio, pick the Bluetooth codec, and read back what the dongle is
+      actually doing. Settings are stored in the dongle's own firmware, so they follow
+      it from one computer to another.
+    </p>
+    <p>
+      It also explains the hardware. The dongle has a single button and one status LED,
+      and the printed manual scatters their meanings across a dozen pages: Appairée
+      collects the full LED colour legend and every button gesture into two pages you
+      can actually read.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Audio mode: high quality, gaming (low latency) or Auracast broadcasting</li>
+      <li>Bluetooth codec selection among those the dongle supports</li>
+      <li>Device information: model, serial number, firmware version and live state</li>
+      <li>The complete status LED colour legend, with the current state highlighted</li>
+      <li>A help page summarising the manual's button gestures</li>
+    </ul>
+    <p>
+      The dongle protocol is implemented by btd700ctl, an unofficial driver by sobalap.
+      Appairée is an independent project and is not affiliated with, endorsed by, or
+      supported by Sennheiser or Sonova Consumer Hearing GmbH.
+    </p>
+  </description>
+
+  <url type="homepage">https://github.com/benjaminbellamy/Appairee</url>
+  <url type="bugtracker">https://github.com/benjaminbellamy/Appairee/issues</url>
+  <!-- The dongle protocol this application is a front-end for. -->
+  <url type="vcs-browser">https://github.com/sobalap/btd700ctl</url>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>The status light, the two settings, and what the dongle reports</caption>
+      <image>https://raw.githubusercontent.com/benjaminbellamy/Appairee/main/data/screenshots/main-window.png</image>
+    </screenshot>
+  </screenshots>
+
+  <launchable type="desktop-id">fr.benjaminbellamy.Appairee.desktop</launchable>
+
+  <content_rating type="oars-1.1"/>
+
+  <categories>
+    <category>Audio</category>
+    <category>AudioVideo</category>
+    <category>Settings</category>
+  </categories>
+
+  <keywords>
+    <keyword>bluetooth</keyword>
+    <keyword>dongle</keyword>
+    <keyword>audio</keyword>
+    <keyword>codec</keyword>
+    <keyword>aptX</keyword>
+  </keywords>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+
+  <releases>
+    <release version="0.1.0" date="2026-09-04">
+      <description>
+        <p>First development release.</p>
+      </description>
+    </release>
+  </releases>
+</component>

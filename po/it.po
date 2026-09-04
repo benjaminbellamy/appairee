@@ -1,0 +1,675 @@
+# IT translation for Appairée.
+# Copyright 2026 Benjamin Bellamy
+# This file is distributed under the same license as the appairee package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: appairee 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-04 00:00+0000\n"
+"PO-Revision-Date: 2026-09-04 00:00+0000\n"
+"Last-Translator: Benjamin Bellamy <benjamin@castopod.org>\n"
+"Language-Team: IT\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:3
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:6
+#: src/ui/about-dialog.blp:26 src/ui/about-dialog.blp:95 src/ui/window.blp:5
+msgid "Appairée"
+msgstr "Appairée"
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:4
+msgid "Bluetooth Dongle Settings"
+msgstr "Impostazioni della chiavetta Bluetooth"
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:5
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:7
+#: src/ui/about-dialog.blp:55
+msgid "Control a Sennheiser BTD 700 Bluetooth dongle"
+msgstr "Controllare una chiavetta Bluetooth Sennheiser BTD 700"
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:6
+msgid "bluetooth;dongle;sennheiser;btd;audio;codec;aptx;gaming;latency;"
+msgstr "bluetooth;chiavetta;dongle;sennheiser;btd;audio;codec;aptx;gioco;latenza;"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:6
+msgid "Window width"
+msgstr "Larghezza della finestra"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:7
+msgid "The width of the main window, restored on the next launch."
+msgstr "La larghezza della finestra principale, ripristinata al prossimo avvio."
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:11
+msgid "Window height"
+msgstr "Altezza della finestra"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:12
+msgid "The height of the main window, restored on the next launch."
+msgstr "L'altezza della finestra principale, ripristinata al prossimo avvio."
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:16
+msgid "Interface language"
+msgstr "Lingua dell'interfaccia"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:17
+msgid "Language code for the interface, or empty to follow the system."
+msgstr "Codice della lingua dell'interfaccia, oppure vuoto per seguire il sistema."
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:21
+msgid "Window maximized state"
+msgstr "Stato massimizzato della finestra"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:22
+msgid "Whether the main window was maximized when it was last closed."
+msgstr "Se la finestra principale era massimizzata all'ultima chiusura."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:13
+msgid "Benjamin Bellamy"
+msgstr "Benjamin Bellamy"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:17
+msgid ""
+"The Sennheiser BTD 700 needs no driver on Linux: it appears as an ordinary "
+"USB sound card. What no Linux software can reach are the settings stored "
+"inside the dongle itself, which Sennheiser exposes only through its Windows "
+"and macOS Dongle Control application."
+msgstr "Il Sennheiser BTD 700 non richiede alcun driver su Linux: appare come una normale scheda audio USB. Ciò che nessun programma Linux riesce a raggiungere sono le impostazioni memorizzate nella chiavetta stessa, che Sennheiser espone solo tramite la sua applicazione Dongle Control per Windows e macOS."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:23
+msgid ""
+"Appairée reaches them. Switch the dongle to gaming mode for low latency when "
+"you are monitoring audio, pick the Bluetooth codec, and read back what the "
+"dongle is actually doing. Settings are stored in the dongle's own firmware, "
+"so they follow it from one computer to another."
+msgstr "Appairée le raggiunge. Passa alla modalità gioco per ridurre la latenza mentre ti ascolti, scegli il codec Bluetooth e rileggi ciò che la chiavetta sta realmente facendo. Le impostazioni risiedono nel firmware della chiavetta e la seguono da un computer all'altro."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:29
+msgid ""
+"It also explains the hardware. The dongle has a single button and one status "
+"LED, and the printed manual scatters their meanings across a dozen pages: "
+"Appairée collects the full LED colour legend and every button gesture into "
+"two pages you can actually read."
+msgstr "Spiega anche l'hardware. La chiavetta ha un solo pulsante e un LED di stato, e il manuale cartaceo disperde il loro significato su una dozzina di pagine: Appairée raccoglie l'intera legenda dei colori del LED e ogni pressione del pulsante in due pagine leggibili."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:35
+msgid "Features:"
+msgstr "Funzionalità:"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:37
+msgid "Audio mode: high quality, gaming (low latency) or Auracast broadcasting"
+msgstr "Modalità audio: alta qualità, gioco (bassa latenza) o trasmissione Auracast"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:38
+msgid "Bluetooth codec selection among those the dongle supports"
+msgstr "Scelta del codec Bluetooth fra quelli supportati dalla chiavetta"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:39
+msgid ""
+"Device information: model, serial number, firmware version and live state"
+msgstr "Informazioni sul dispositivo: modello, numero di serie, versione del firmware e stato in tempo reale"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:40
+msgid ""
+"The complete status LED colour legend, with the current state highlighted"
+msgstr "La legenda completa dei colori del LED di stato, con lo stato attuale evidenziato"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:41
+msgid "A help page summarising the manual's button gestures"
+msgstr "Una pagina di aiuto che riassume le pressioni del pulsante descritte nel manuale"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:43
+msgid ""
+"The dongle protocol is implemented by btd700ctl, an unofficial driver by "
+"sobalap. Appairée is an independent project and is not affiliated with, "
+"endorsed by, or supported by Sennheiser or Sonova Consumer Hearing GmbH."
+msgstr "Il protocollo della chiavetta è realizzato da btd700ctl, un driver non ufficiale di sobalap. Appairée è un progetto indipendente, non affiliato a Sennheiser né a Sonova Consumer Hearing GmbH, e non è da loro approvato né supportato."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:66
+msgid "bluetooth"
+msgstr "bluetooth"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:67
+msgid "dongle"
+msgstr "chiavetta"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:68
+msgid "audio"
+msgstr "audio"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:69
+msgid "codec"
+msgstr "codec"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:70
+msgid "aptX"
+msgstr "aptX"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:86
+msgid "First development release."
+msgstr "Prima versione di sviluppo."
+
+#: src/led.vala:238
+msgid "Red, then white, alternately"
+msgstr "Rosso, poi bianco, alternati"
+
+#: src/led.vala:239
+msgid "Pairing with headphones is being performed"
+msgstr "Associazione con le cuffie in corso"
+
+#: src/led.vala:241
+msgid "Flashes white 3×"
+msgstr "Lampeggia 3× in bianco"
+
+#: src/led.vala:242
+msgid "Pairing with headphones was successful"
+msgstr "Associazione con le cuffie riuscita"
+
+#: src/led.vala:244
+msgid "Repeatedly flashes white 3× for 20 seconds"
+msgstr "Lampeggia 3× in bianco, ripetutamente, per 20 secondi"
+
+#: src/led.vala:245
+msgid "Searches for paired headphones for up to 20 seconds"
+msgstr "Cerca le cuffie associate per un massimo di 20 secondi"
+
+#: src/led.vala:247
+msgid "Lights up white and flashes white 3×"
+msgstr "Si accende in bianco e lampeggia 3× in bianco"
+
+#: src/led.vala:248
+msgid "Reconnects with paired headphones"
+msgstr "Si riconnette alle cuffie associate"
+
+#: src/led.vala:250
+msgid "Flashes red 3×"
+msgstr "Lampeggia 3× in rosso"
+
+#: src/led.vala:251
+msgid "Pairing with headphones was not successful"
+msgstr "Associazione con le cuffie non riuscita"
+
+#: src/led.vala:253
+msgid "Lights up dimly white"
+msgstr "Si accende in bianco tenue"
+
+#: src/led.vala:254
+msgid "Connected via Bluetooth Classic mode"
+msgstr "Connesso in modalità Bluetooth Classic"
+
+#: src/led.vala:256
+msgid "Lights up dimly blue"
+msgstr "Si accende in blu tenue"
+
+#: src/led.vala:257
+msgid "Connected via Bluetooth Low Energy mode"
+msgstr "Connesso in modalità Bluetooth Low Energy"
+
+#: src/led.vala:259
+msgid "Lights up blue"
+msgstr "Si accende in blu"
+
+#: src/led.vala:260
+msgid "Audio coding via LC3 codec"
+msgstr "Codifica audio tramite codec LC3"
+
+#: src/led.vala:262
+msgid "Lights up pink"
+msgstr "Si accende in rosa"
+
+#: src/led.vala:263
+msgid "Audio coding via aptX Adaptive or aptX Classic codec"
+msgstr "Codifica audio tramite codec aptX Adaptive o aptX Classic"
+
+#: src/led.vala:265
+msgid "Lights up purple"
+msgstr "Si accende in viola"
+
+#: src/led.vala:266
+msgid "Audio coding via aptX Lossless codec"
+msgstr "Codifica audio tramite codec aptX Lossless"
+
+#: src/led.vala:268
+msgid "Lights up white"
+msgstr "Si accende in bianco"
+
+#: src/led.vala:269
+msgid "Audio coding via SBC codec"
+msgstr "Codifica audio tramite codec SBC"
+
+#: src/led.vala:271
+msgid "Flashes white"
+msgstr "Lampeggia in bianco"
+
+#: src/led.vala:272
+msgid "Incoming call"
+msgstr "Chiamata in arrivo"
+
+#: src/led.vala:274
+msgid "Flashes pink 3×"
+msgstr "Lampeggia 3× in rosa"
+
+#: src/led.vala:275
+msgid "Reset to factory default settings"
+msgstr "Ripristino delle impostazioni di fabbrica"
+
+#: src/led.vala:277
+msgid "Off"
+msgstr "Spento"
+
+#: src/led.vala:278
+msgid "Disconnected from headphones or device"
+msgstr "Disconnesso dalle cuffie o dal dispositivo"
+
+#: src/led.vala:280
+msgid "Lights up red"
+msgstr "Si accende in rosso"
+
+#: src/led.vala:281
+msgid "Mute function is active"
+msgstr "La funzione di silenziamento è attiva"
+
+#: src/led.vala:283
+msgid "Lights up amber"
+msgstr "Si accende in ambra"
+
+#: src/led.vala:284
+msgid "Auracast broadcasting mode"
+msgstr "Modalità di trasmissione Auracast"
+
+#: src/led.vala:286
+msgid "Lights up green"
+msgstr "Si accende in verde"
+
+#: src/led.vala:287
+msgid "Gaming mode"
+msgstr "Modalità gioco"
+
+#: src/ui/about-dialog.blp:5
+msgid "About Appairée"
+msgstr "Informazioni su Appairée"
+
+#: src/ui/about-dialog.blp:64
+msgid "Credits"
+msgstr "Riconoscimenti"
+
+#: src/ui/about-dialog.blp:65
+msgid ""
+"Appairée is only a window. Everything that actually talks to the dongle — "
+"the reverse-engineered HID protocol, the driver, the PipeWire daemon — is "
+"the work of sobalap, in btd700ctl."
+msgstr "Appairée è soltanto una finestra. Tutto ciò che parla davvero con la chiavetta — il protocollo HID ricostruito per reverse engineering, il driver, il servizio PipeWire — è opera di sobalap, in btd700ctl."
+
+#: src/ui/about-dialog.blp:73
+msgid "The library this application is built on"
+msgstr "La libreria su cui si basa questa applicazione"
+
+#: src/ui/about-dialog.blp:88
+msgid "Legal"
+msgstr "Note legali"
+
+#: src/ui/dongle-dialog.blp:5 src/ui/window.blp:224
+msgid "About Dongle"
+msgstr "Informazioni sulla chiavetta"
+
+#: src/ui/dongle-dialog.blp:19
+msgid "Reported by the dongle itself."
+msgstr "Riportato dalla chiavetta stessa."
+
+#: src/ui/dongle-dialog.blp:22
+msgid "Model"
+msgstr "Modello"
+
+#: src/ui/dongle-dialog.blp:29
+msgid "Manufacturer"
+msgstr "Produttore"
+
+#: src/ui/dongle-dialog.blp:36
+msgid "Firmware"
+msgstr "Firmware"
+
+#: src/ui/dongle-dialog.blp:37
+msgid ""
+"Updates are published only for Windows and macOS, so this cannot be changed "
+"from here."
+msgstr "Gli aggiornamenti sono pubblicati solo per Windows e macOS, quindi non è modificabile da qui."
+
+#: src/ui/dongle-dialog.blp:45
+msgid "Serial Number"
+msgstr "Numero di serie"
+
+#: src/ui/manual-dialog.blp:5 src/ui/window.blp:229
+msgid "Manual"
+msgstr "Manuale"
+
+#: src/ui/manual-dialog.blp:19
+msgid "What the Light Means"
+msgstr "Che cosa significa la luce"
+
+#: src/ui/manual-dialog.blp:20
+msgid ""
+"The single LED on the dongle housing. The row the dongle is showing right "
+"now is marked."
+msgstr "L'unico LED sull'involucro della chiavetta. La riga che la chiavetta sta mostrando in questo momento è contrassegnata."
+
+#: src/ui/manual-dialog.blp:28
+msgid "The Button"
+msgstr "Il pulsante"
+
+#: src/ui/manual-dialog.blp:29
+msgid ""
+"The dongle has one button, and everything it does depends on how many times "
+"you press it."
+msgstr "La chiavetta ha un solo pulsante, e tutto ciò che fa dipende da quante volte lo premi."
+
+#: src/ui/manual-dialog.blp:32
+msgid "Press once"
+msgstr "Premere una volta"
+
+#: src/ui/manual-dialog.blp:33
+msgid ""
+"Reconnect to your headphones. While audio is playing, switches to the next "
+"codec instead. During a call, mutes and unmutes you."
+msgstr "Riconnettersi alle cuffie. Durante la riproduzione passa invece al codec successivo. Durante una chiamata attiva e disattiva il silenziamento."
+
+#: src/ui/manual-dialog.blp:38
+msgid "Press twice"
+msgstr "Premere due volte"
+
+#: src/ui/manual-dialog.blp:39
+msgid ""
+"Enter or leave Auracast broadcasting, which plays to several pairs of "
+"headphones at once."
+msgstr "Entrare o uscire dalla trasmissione Auracast, che riproduce su più cuffie contemporaneamente."
+
+#: src/ui/manual-dialog.blp:44
+msgid "Press three times"
+msgstr "Premere tre volte"
+
+#: src/ui/manual-dialog.blp:45
+msgid ""
+"Enter or leave gaming mode. Same as the Audio Mode setting in the main "
+"window."
+msgstr "Entrare o uscire dalla modalità gioco. Equivale all'impostazione Modalità audio nella finestra principale."
+
+#: src/ui/manual-dialog.blp:50
+msgid "Press four times"
+msgstr "Premere quattro volte"
+
+#: src/ui/manual-dialog.blp:51
+msgid "Switch from the call profile (HFP) to the music profile (A2DP)."
+msgstr "Passare dal profilo chiamata (HFP) al profilo musica (A2DP)."
+
+#: src/ui/manual-dialog.blp:56
+msgid "Hold for 3 seconds"
+msgstr "Tenere premuto 3 secondi"
+
+#: src/ui/manual-dialog.blp:57
+msgid ""
+"Start pairing. The LED alternates red and white while it looks for "
+"headphones."
+msgstr "Avviare l'associazione. Il LED alterna rosso e bianco mentre cerca le cuffie."
+
+#: src/ui/manual-dialog.blp:62
+msgid "Hold for 10 seconds"
+msgstr "Tenere premuto 10 secondi"
+
+#: src/ui/manual-dialog.blp:63
+msgid "Reset to factory settings. The LED flashes pink 3× when it is done."
+msgstr "Ripristinare le impostazioni di fabbrica. Al termine il LED lampeggia 3× in rosa."
+
+#: src/ui/manual-dialog.blp:73 src/ui/window.vala:135
+msgid "Pairing"
+msgstr "Associazione"
+
+#: src/ui/manual-dialog.blp:76
+msgid "The dongle remembers exactly one pair of headphones"
+msgstr "La chiavetta ricorda esattamente un paio di cuffie"
+
+#: src/ui/manual-dialog.blp:77
+msgid ""
+"Pairing with a new pair overwrites the old one. There is no list to choose "
+"from, and nothing to delete."
+msgstr "Associare un nuovo paio sovrascrive il precedente. Non c'è alcun elenco da cui scegliere, né nulla da eliminare."
+
+#: src/ui/manual-dialog.blp:82
+msgid "It reconnects on its own"
+msgstr "Si riconnette da sola"
+
+#: src/ui/manual-dialog.blp:83
+msgid ""
+"Plug it into any computer and it searches for its remembered headphones for "
+"about 20 seconds."
+msgstr "Collegala a qualsiasi computer e cercherà per una ventina di secondi le cuffie che ha memorizzato."
+
+#: src/ui/manual-dialog.blp:93
+msgid "Codecs"
+msgstr "Codec"
+
+#: src/ui/manual-dialog.blp:96
+msgid "The dongle picks the best one both ends support"
+msgstr "La chiavetta sceglie il migliore supportato da entrambi i lati"
+
+#: src/ui/manual-dialog.blp:97
+msgid ""
+"In descending order: LC3, aptX Adaptive, aptX Lossless, aptX Classic, SBC. "
+"The Codec setting lets you override that choice."
+msgstr "In ordine decrescente: LC3, aptX Adaptive, aptX Lossless, aptX Classic, SBC. L'impostazione Codec consente di forzare questa scelta."
+
+#: src/ui/manual-dialog.blp:107
+msgid "Good to Know"
+msgstr "Buono a sapersi"
+
+#: src/ui/manual-dialog.blp:110
+msgid "The audio mode only changes while sound is playing"
+msgstr "La modalità audio cambia solo mentre c'è del suono"
+
+#: src/ui/manual-dialog.blp:111
+msgid ""
+"The dongle refuses to switch between high quality, gaming and broadcasting "
+"unless it is actively streaming audio. Start playback first, then change the "
+"mode."
+msgstr "La chiavetta rifiuta di passare fra alta qualità, gioco e trasmissione se non sta effettivamente trasmettendo audio. Avvia prima la riproduzione, poi cambia modalità."
+
+#: src/ui/manual-dialog.blp:116
+msgid "Permission is needed to reach the dongle"
+msgstr "Serve un permesso per raggiungere la chiavetta"
+
+#: src/ui/manual-dialog.blp:117
+msgid ""
+"Appairée cannot talk to the dongle until the file 99-btd700.rules, which "
+"ships with Appairée, is copied into /etc/udev/rules.d. Without it, the "
+"dongle is never found even when it is plugged in."
+msgstr "Appairée non può comunicare con la chiavetta finché il file 99-btd700.rules, incluso in Appairée, non viene copiato in /etc/udev/rules.d. Senza di esso la chiavetta non viene mai trovata, anche se collegata."
+
+#: src/ui/manual-dialog.blp:122
+msgid "Range"
+msgstr "Portata"
+
+#: src/ui/manual-dialog.blp:123
+msgid ""
+"The manual contradicts itself: up to 10 metres line of sight on one page, up "
+"to 50 metres in the specifications on another."
+msgstr "Il manuale si contraddice: fino a 10 metri in visibilità diretta in una pagina, fino a 50 metri nelle specifiche in un'altra."
+
+#: src/ui/manual-dialog.blp:128
+msgid "No driver is needed for sound"
+msgstr "Per il suono non serve alcun driver"
+
+#: src/ui/manual-dialog.blp:129
+msgid ""
+"Linux already treats the dongle as a USB sound card. Appairée only changes "
+"settings stored inside it."
+msgstr "Linux tratta già la chiavetta come una scheda audio USB. Appairée si limita a modificare le impostazioni memorizzate al suo interno."
+
+#: src/ui/manual-dialog.vala:50
+msgid "The dongle is showing this right now"
+msgstr "La chiavetta sta mostrando questo in questo momento"
+
+#: src/ui/window.blp:16
+msgid "Main Menu"
+msgstr "Menu principale"
+
+#: src/ui/window.blp:29
+msgid "No Dongle Found"
+msgstr "Nessuna chiavetta trovata"
+
+#: src/ui/window.blp:30 src/ui/window.vala:222
+msgid "Plug in a Sennheiser BTD 700 and it will appear here."
+msgstr "Collega un Sennheiser BTD 700 e comparirà qui."
+
+#: src/ui/window.blp:39
+msgid ""
+"If it is already plugged in, Appairée is not allowed to open it. Linux needs "
+"a udev rule for that, and no application can install one for itself. Run "
+"this once, then unplug and replug the dongle:"
+msgstr "Se è già collegato, Appairée non è autorizzata ad aprirlo. Linux richiede una regola udev per questo, e nessuna applicazione può installarsene una da sé. Esegui questo una volta, poi scollega e ricollega la chiavetta:"
+
+#: src/ui/window.blp:60 src/ui/window.vala:253
+msgid "Copy Command"
+msgstr "Copia il comando"
+
+#: src/ui/window.blp:77
+msgid ""
+"The dongle ignored that. Its audio mode can only be changed while sound is "
+"playing through it."
+msgstr "La chiavetta ha ignorato la modifica. La sua modalità audio può essere cambiata solo mentre vi passa del suono."
+
+#: src/ui/window.blp:85
+msgid "Status Light"
+msgstr "Luce di stato"
+
+#: src/ui/window.blp:90
+msgid "What the light on the dongle is showing right now."
+msgstr "Che cosa sta mostrando in questo momento la luce della chiavetta."
+
+#: src/ui/window.blp:93
+msgid "Reading the dongle…"
+msgstr "Lettura della chiavetta…"
+
+#: src/ui/window.blp:109
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: src/ui/window.blp:110
+msgid ""
+"Stored in the dongle itself, so they follow it from one computer to another."
+msgstr "Memorizzate nella chiavetta stessa, quindi la seguono da un computer all'altro."
+
+#: src/ui/window.blp:113
+msgid "Audio Mode"
+msgstr "Modalità audio"
+
+#: src/ui/window.blp:119
+msgid ""
+"High Quality, Gaming for low latency, or Auracast Broadcasting to several "
+"headphones at once."
+msgstr "Alta qualità, Gioco per una bassa latenza, o Trasmissione Auracast verso più cuffie contemporaneamente."
+
+#: src/ui/window.blp:123
+msgid "High Quality"
+msgstr "Alta qualità"
+
+#: src/ui/window.blp:124
+msgid "Gaming"
+msgstr "Gioco"
+
+#: src/ui/window.blp:125
+msgid "Auracast Broadcasting"
+msgstr "Trasmissione Auracast"
+
+#: src/ui/window.blp:131
+msgid "Codec"
+msgstr "Codec"
+
+#: src/ui/window.blp:137
+msgid "Only codecs your headphones also support are listed."
+msgstr "Sono elencati solo i codec supportati anche dalle tue cuffie."
+
+#: src/ui/window.blp:142
+msgid "Status"
+msgstr "Stato"
+
+#: src/ui/window.blp:147
+msgid "Read from the dongle. These cannot be changed here."
+msgstr "Letto dalla chiavetta. Questi valori non sono modificabili qui."
+
+#: src/ui/window.blp:150
+msgid "Connection"
+msgstr "Connessione"
+
+#: src/ui/window.blp:156
+msgid ""
+"Disconnected, Connected when paired but idle, Streaming Audio while music is "
+"playing, or Streaming Voice during a call."
+msgstr "Disconnesso, Connesso quando è associato ma inattivo, Streaming audio mentre suona la musica, o Streaming voce durante una chiamata."
+
+#: src/ui/window.blp:163
+msgid "LE Audio"
+msgstr "LE Audio"
+
+#: src/ui/window.blp:169
+msgid ""
+"The newer Bluetooth Low Energy audio path: Disconnected, Connected, "
+"Streaming Unicast to your headphones, or Streaming Broadcast for Auracast."
+msgstr "Il più recente canale audio Bluetooth Low Energy: Disconnesso, Connesso, Streaming unicast verso le cuffie, o Streaming broadcast per Auracast."
+
+#: src/ui/window.blp:176
+msgid "Bluetooth Mode"
+msgstr "Modalità Bluetooth"
+
+#: src/ui/window.blp:182
+msgid ""
+"Which radio link is carrying the sound: Classic, LE Audio, or Multipoint for "
+"two devices at once. The dongle decides this itself and it cannot be forced."
+msgstr "Quale collegamento radio trasporta il suono: Classic, LE Audio, o Multipoint per due dispositivi insieme. La chiavetta lo decide da sé e non può essere forzato."
+
+#: src/ui/window.blp:189
+msgid "Audio Sink"
+msgstr "Uscita audio"
+
+#: src/ui/window.blp:195
+msgid ""
+"Which paths the dongle is offering to headphones right now: Classic, LE "
+"Audio, Dual for both at once, or Not Available when nothing is connected."
+msgstr "Quali canali la chiavetta sta offrendo ora alle cuffie: Classic, LE Audio, Dual per entrambi insieme, o Non disponibile quando non c'è nulla di connesso."
+
+#: src/ui/window.blp:202
+msgid "Quality"
+msgstr "Qualità"
+
+#: src/ui/window.blp:208
+msgid ""
+"The sample rate and bit depth this computer is sending to the dongle: 44.1, "
+"48 or 96 kHz, at 16 or 24 bits."
+msgstr "La frequenza di campionamento e la profondità in bit che questo computer invia alla chiavetta: 44,1, 48 o 96 kHz, a 16 o 24 bit."
+
+#: src/ui/window.blp:235
+msgid "Language"
+msgstr "Lingua"
+
+#: src/ui/window.blp:278
+msgid "_About Appairée"
+msgstr "_Informazioni su Appairée"
+
+#: src/ui/window.vala:171
+msgid "No dongle connected"
+msgstr "Nessuna chiavetta connessa"
+
+#: src/ui/window.vala:172
+msgid "The light cannot be read in this state"
+msgstr "In questo stato la luce non è determinabile"
+
+#: src/ui/window.vala:225
+#, c-format
+msgid "The dongle could not be opened: %s"
+msgstr "Impossibile aprire la chiavetta: %s"
+
+#: src/ui/window.vala:251
+msgid "Copied"
+msgstr "Copiato"

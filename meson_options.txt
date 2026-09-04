@@ -1,0 +1,6 @@
+option(
+  'udev_rules_dir',
+  type: 'string',
+  value: '',
+  description: 'Where to install the udev rule. Empty means do not install it, which is right for a Flatpak (it cannot reach the host) and for an uninstalled build. Native packages set this to /usr/lib/udev/rules.d so the rule is in place the moment the package is installed.',
+)

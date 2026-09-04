@@ -1,0 +1,126 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $AppaireeAboutDialog: Adw.Dialog {
+  title: _("About Appairée");
+  content-width: 460;
+  content-height: 700;
+
+  child: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    content: Adw.PreferencesPage {
+      Adw.PreferencesGroup {
+        Box {
+          orientation: vertical;
+          spacing: 0;
+          margin-bottom: 10;
+
+          Image {
+            icon-name: "fr.benjaminbellamy.Appairee";
+            pixel-size: 96;
+          }
+
+          Label {
+            label: _("Appairée");
+            margin-top: 8;
+
+            styles [
+              "title-1",
+            ]
+          }
+
+          Label {
+            label: "Benjamin Bellamy";
+
+            styles [
+              "dim-label",
+            ]
+          }
+
+          Label version_label {
+            halign: center;
+            margin-top: 4;
+
+            styles [
+              "caption",
+              "accent",
+            ]
+          }
+
+          /* The description sits here rather than behind a "Details" row, which
+           * is what AdwAboutDialog would have done with it. */
+          Label {
+            label: _("Control a Sennheiser BTD 700 Bluetooth dongle");
+            wrap: true;
+            justify: center;
+            margin-top: 10;
+          }
+        }
+      }
+
+      Adw.PreferencesGroup {
+        title: _("Credits");
+        description: _("Appairée is only a window. Everything that actually talks to the dongle — the reverse-engineered HID protocol, the driver, the PipeWire daemon — is the work of sobalap, in btd700ctl.");
+
+        styles [
+          "readonly-group",
+        ]
+
+        Adw.ActionRow project_row {
+          title: "btd700ctl";
+          subtitle: _("The library this application is built on");
+          activatable: true;
+
+          [suffix]
+          Image {
+            icon-name: "adw-external-link-symbolic";
+
+            styles [
+              "dim-label",
+            ]
+          }
+        }
+      }
+
+      Adw.PreferencesGroup {
+        title: _("Legal");
+
+        styles [
+          "readonly-group",
+        ]
+
+        Adw.ActionRow app_licence_row {
+          title: _("Appairée");
+          subtitle: "GPL-3.0-or-later";
+          activatable: true;
+
+          [suffix]
+          Image {
+            icon-name: "adw-external-link-symbolic";
+
+            styles [
+              "dim-label",
+            ]
+          }
+        }
+
+        Adw.ActionRow lib_licence_row {
+          title: "btd700ctl";
+          subtitle: "LGPL-2.1";
+          activatable: true;
+
+          [suffix]
+          Image {
+            icon-name: "adw-external-link-symbolic";
+
+            styles [
+              "dim-label",
+            ]
+          }
+        }
+      }
+    };
+  };
+}

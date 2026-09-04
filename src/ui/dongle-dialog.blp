@@ -1,0 +1,59 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $AppaireeDongleDialog: Adw.Dialog {
+  title: _("About Dongle");
+  content-width: 460;
+  content-height: 380;
+
+  child: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    content: Adw.PreferencesPage {
+      Adw.PreferencesGroup {
+        styles [
+          "readonly-group",
+        ]
+
+        description: _("Reported by the dongle itself.");
+
+        Adw.ActionRow {
+          title: _("Model");
+
+          [suffix]
+          Label model_label {}
+        }
+
+        Adw.ActionRow {
+          title: _("Manufacturer");
+
+          [suffix]
+          Label manufacturer_label {}
+        }
+
+        Adw.ActionRow {
+          title: _("Firmware");
+          subtitle: _("Updates are published only for Windows and macOS, so this cannot be changed from here.");
+          subtitle-lines: 0;
+
+          [suffix]
+          Label firmware_label {}
+        }
+
+        Adw.ActionRow {
+          title: _("Serial Number");
+
+          [suffix]
+          Label serial_label {
+            selectable: true;
+
+            styles [
+              "monospace",
+            ]
+          }
+        }
+      }
+    };
+  };
+}

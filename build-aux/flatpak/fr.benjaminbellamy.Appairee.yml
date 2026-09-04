@@ -1,0 +1,32 @@
+id: fr.benjaminbellamy.Appairee
+runtime: org.gnome.Platform
+runtime-version: '50'
+sdk: org.gnome.Sdk
+command: appairee
+
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=ipc
+  # btd700ctl reaches the dongle through hidapi's hidraw backend, which opens
+  # /dev/hidrawN directly. Without this, /dev/hidraw* does not exist inside the
+  # sandbox at all. The USB portal is not an alternative: it hands out libusb
+  # file descriptors, which the hidraw backend cannot accept. Access still
+  # depends on the host udev rule shipped with btd700ctl, which is what makes
+  # the node writable by a normal user.
+  - --device=all
+
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/doc
+  - /share/man
+  - '*.la'
+  - '*.a'
+
+modules:
+  - name: appairee
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: ../..

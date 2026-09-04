@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Appairée
+GenericName=Bluetooth Dongle Settings
+Comment=Control a Sennheiser BTD 700 Bluetooth dongle
+Keywords=bluetooth;dongle;sennheiser;btd;audio;codec;aptx;gaming;latency;
+Exec=appairee
+Icon=fr.benjaminbellamy.Appairee
+Terminal=false
+Categories=GNOME;GTK;AudioVideo;Audio;Settings;
+StartupNotify=true

@@ -1,0 +1,675 @@
+# NL translation for Appairée.
+# Copyright 2026 Benjamin Bellamy
+# This file is distributed under the same license as the appairee package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: appairee 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-04 00:00+0000\n"
+"PO-Revision-Date: 2026-09-04 00:00+0000\n"
+"Last-Translator: Benjamin Bellamy <benjamin@castopod.org>\n"
+"Language-Team: NL\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:3
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:6
+#: src/ui/about-dialog.blp:26 src/ui/about-dialog.blp:95 src/ui/window.blp:5
+msgid "Appairée"
+msgstr "Appairée"
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:4
+msgid "Bluetooth Dongle Settings"
+msgstr "Instellingen van de Bluetooth-dongle"
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:5
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:7
+#: src/ui/about-dialog.blp:55
+msgid "Control a Sennheiser BTD 700 Bluetooth dongle"
+msgstr "Een Sennheiser BTD 700 Bluetooth-dongle bedienen"
+
+#: data/fr.benjaminbellamy.Appairee.desktop.in:6
+msgid "bluetooth;dongle;sennheiser;btd;audio;codec;aptx;gaming;latency;"
+msgstr "bluetooth;dongle;sennheiser;btd;audio;codec;aptx;gamen;latentie;"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:6
+msgid "Window width"
+msgstr "Vensterbreedte"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:7
+msgid "The width of the main window, restored on the next launch."
+msgstr "De breedte van het hoofdvenster, hersteld bij de volgende start."
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:11
+msgid "Window height"
+msgstr "Vensterhoogte"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:12
+msgid "The height of the main window, restored on the next launch."
+msgstr "De hoogte van het hoofdvenster, hersteld bij de volgende start."
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:16
+msgid "Interface language"
+msgstr "Taal van de interface"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:17
+msgid "Language code for the interface, or empty to follow the system."
+msgstr "Taalcode voor de interface, of leeg om het systeem te volgen."
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:21
+msgid "Window maximized state"
+msgstr "Gemaximaliseerde staat van het venster"
+
+#: data/fr.benjaminbellamy.Appairee.gschema.xml:22
+msgid "Whether the main window was maximized when it was last closed."
+msgstr "Of het hoofdvenster gemaximaliseerd was toen het voor het laatst gesloten werd."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:13
+msgid "Benjamin Bellamy"
+msgstr "Benjamin Bellamy"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:17
+msgid ""
+"The Sennheiser BTD 700 needs no driver on Linux: it appears as an ordinary "
+"USB sound card. What no Linux software can reach are the settings stored "
+"inside the dongle itself, which Sennheiser exposes only through its Windows "
+"and macOS Dongle Control application."
+msgstr "De Sennheiser BTD 700 heeft op Linux geen stuurprogramma nodig: hij verschijnt als een gewone USB-geluidskaart. Wat geen enkel Linux-programma bereikt, zijn de instellingen die in de dongle zelf zijn opgeslagen en die Sennheiser alleen via zijn Dongle Control-toepassing voor Windows en macOS toegankelijk maakt."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:23
+msgid ""
+"Appairée reaches them. Switch the dongle to gaming mode for low latency when "
+"you are monitoring audio, pick the Bluetooth codec, and read back what the "
+"dongle is actually doing. Settings are stored in the dongle's own firmware, "
+"so they follow it from one computer to another."
+msgstr "Appairée bereikt ze wel. Zet de dongle in gamemodus voor lage latentie terwijl je meeluistert, kies de Bluetooth-codec en lees terug wat de dongle werkelijk doet. De instellingen staan in de firmware van de dongle en reizen dus met hem mee van de ene computer naar de andere."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:29
+msgid ""
+"It also explains the hardware. The dongle has a single button and one status "
+"LED, and the printed manual scatters their meanings across a dozen pages: "
+"Appairée collects the full LED colour legend and every button gesture into "
+"two pages you can actually read."
+msgstr "Het legt ook de hardware uit. De dongle heeft één knop en één status-led, en de gedrukte handleiding verspreidt hun betekenis over een tiental pagina's: Appairée brengt de volledige kleurenlegenda van de led en elke knopbediening samen op twee leesbare pagina's."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:35
+msgid "Features:"
+msgstr "Functies:"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:37
+msgid "Audio mode: high quality, gaming (low latency) or Auracast broadcasting"
+msgstr "Audiomodus: hoge kwaliteit, gamen (lage latentie) of Auracast-uitzending"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:38
+msgid "Bluetooth codec selection among those the dongle supports"
+msgstr "Keuze van de Bluetooth-codec uit wat de dongle ondersteunt"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:39
+msgid ""
+"Device information: model, serial number, firmware version and live state"
+msgstr "Apparaatgegevens: model, serienummer, firmwareversie en actuele toestand"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:40
+msgid ""
+"The complete status LED colour legend, with the current state highlighted"
+msgstr "De volledige kleurenlegenda van de status-led, met de huidige toestand gemarkeerd"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:41
+msgid "A help page summarising the manual's button gestures"
+msgstr "Een hulppagina die de knopbedieningen uit de handleiding samenvat"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:43
+msgid ""
+"The dongle protocol is implemented by btd700ctl, an unofficial driver by "
+"sobalap. Appairée is an independent project and is not affiliated with, "
+"endorsed by, or supported by Sennheiser or Sonova Consumer Hearing GmbH."
+msgstr "Het protocol van de dongle is geïmplementeerd door btd700ctl, een onofficieel stuurprogramma van sobalap. Appairée is een onafhankelijk project, niet verbonden aan Sennheiser of Sonova Consumer Hearing GmbH, en wordt door hen niet onderschreven of ondersteund."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:66
+msgid "bluetooth"
+msgstr "bluetooth"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:67
+msgid "dongle"
+msgstr "dongle"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:68
+msgid "audio"
+msgstr "audio"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:69
+msgid "codec"
+msgstr "codec"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:70
+msgid "aptX"
+msgstr "aptX"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:86
+msgid "First development release."
+msgstr "Eerste ontwikkelversie."
+
+#: src/led.vala:238
+msgid "Red, then white, alternately"
+msgstr "Rood, dan wit, om en om"
+
+#: src/led.vala:239
+msgid "Pairing with headphones is being performed"
+msgstr "Koppelen met een koptelefoon is bezig"
+
+#: src/led.vala:241
+msgid "Flashes white 3×"
+msgstr "Knippert 3× wit"
+
+#: src/led.vala:242
+msgid "Pairing with headphones was successful"
+msgstr "Koppelen met de koptelefoon is gelukt"
+
+#: src/led.vala:244
+msgid "Repeatedly flashes white 3× for 20 seconds"
+msgstr "Knippert 20 seconden lang herhaaldelijk 3× wit"
+
+#: src/led.vala:245
+msgid "Searches for paired headphones for up to 20 seconds"
+msgstr "Zoekt maximaal 20 seconden naar de gekoppelde koptelefoon"
+
+#: src/led.vala:247
+msgid "Lights up white and flashes white 3×"
+msgstr "Licht wit op en knippert 3× wit"
+
+#: src/led.vala:248
+msgid "Reconnects with paired headphones"
+msgstr "Maakt opnieuw verbinding met de gekoppelde koptelefoon"
+
+#: src/led.vala:250
+msgid "Flashes red 3×"
+msgstr "Knippert 3× rood"
+
+#: src/led.vala:251
+msgid "Pairing with headphones was not successful"
+msgstr "Koppelen met de koptelefoon is mislukt"
+
+#: src/led.vala:253
+msgid "Lights up dimly white"
+msgstr "Licht gedimd wit op"
+
+#: src/led.vala:254
+msgid "Connected via Bluetooth Classic mode"
+msgstr "Verbonden via Bluetooth Classic"
+
+#: src/led.vala:256
+msgid "Lights up dimly blue"
+msgstr "Licht gedimd blauw op"
+
+#: src/led.vala:257
+msgid "Connected via Bluetooth Low Energy mode"
+msgstr "Verbonden via Bluetooth Low Energy"
+
+#: src/led.vala:259
+msgid "Lights up blue"
+msgstr "Licht blauw op"
+
+#: src/led.vala:260
+msgid "Audio coding via LC3 codec"
+msgstr "Audiocodering via de LC3-codec"
+
+#: src/led.vala:262
+msgid "Lights up pink"
+msgstr "Licht roze op"
+
+#: src/led.vala:263
+msgid "Audio coding via aptX Adaptive or aptX Classic codec"
+msgstr "Audiocodering via de codec aptX Adaptive of aptX Classic"
+
+#: src/led.vala:265
+msgid "Lights up purple"
+msgstr "Licht paars op"
+
+#: src/led.vala:266
+msgid "Audio coding via aptX Lossless codec"
+msgstr "Audiocodering via de aptX Lossless-codec"
+
+#: src/led.vala:268
+msgid "Lights up white"
+msgstr "Licht wit op"
+
+#: src/led.vala:269
+msgid "Audio coding via SBC codec"
+msgstr "Audiocodering via de SBC-codec"
+
+#: src/led.vala:271
+msgid "Flashes white"
+msgstr "Knippert wit"
+
+#: src/led.vala:272
+msgid "Incoming call"
+msgstr "Inkomende oproep"
+
+#: src/led.vala:274
+msgid "Flashes pink 3×"
+msgstr "Knippert 3× roze"
+
+#: src/led.vala:275
+msgid "Reset to factory default settings"
+msgstr "Teruggezet op de fabrieksinstellingen"
+
+#: src/led.vala:277
+msgid "Off"
+msgstr "Uit"
+
+#: src/led.vala:278
+msgid "Disconnected from headphones or device"
+msgstr "Losgekoppeld van de koptelefoon of het apparaat"
+
+#: src/led.vala:280
+msgid "Lights up red"
+msgstr "Licht rood op"
+
+#: src/led.vala:281
+msgid "Mute function is active"
+msgstr "De dempfunctie is actief"
+
+#: src/led.vala:283
+msgid "Lights up amber"
+msgstr "Licht amber op"
+
+#: src/led.vala:284
+msgid "Auracast broadcasting mode"
+msgstr "Auracast-uitzendmodus"
+
+#: src/led.vala:286
+msgid "Lights up green"
+msgstr "Licht groen op"
+
+#: src/led.vala:287
+msgid "Gaming mode"
+msgstr "Gamemodus"
+
+#: src/ui/about-dialog.blp:5
+msgid "About Appairée"
+msgstr "Over Appairée"
+
+#: src/ui/about-dialog.blp:64
+msgid "Credits"
+msgstr "Met dank aan"
+
+#: src/ui/about-dialog.blp:65
+msgid ""
+"Appairée is only a window. Everything that actually talks to the dongle — "
+"the reverse-engineered HID protocol, the driver, the PipeWire daemon — is "
+"the work of sobalap, in btd700ctl."
+msgstr "Appairée is niet meer dan een venster. Alles wat werkelijk met de dongle praat — het door reverse engineering achterhaalde HID-protocol, het stuurprogramma, de PipeWire-dienst — is het werk van sobalap, in btd700ctl."
+
+#: src/ui/about-dialog.blp:73
+msgid "The library this application is built on"
+msgstr "De bibliotheek waarop deze toepassing is gebouwd"
+
+#: src/ui/about-dialog.blp:88
+msgid "Legal"
+msgstr "Juridisch"
+
+#: src/ui/dongle-dialog.blp:5 src/ui/window.blp:224
+msgid "About Dongle"
+msgstr "Over de dongle"
+
+#: src/ui/dongle-dialog.blp:19
+msgid "Reported by the dongle itself."
+msgstr "Opgegeven door de dongle zelf."
+
+#: src/ui/dongle-dialog.blp:22
+msgid "Model"
+msgstr "Model"
+
+#: src/ui/dongle-dialog.blp:29
+msgid "Manufacturer"
+msgstr "Fabrikant"
+
+#: src/ui/dongle-dialog.blp:36
+msgid "Firmware"
+msgstr "Firmware"
+
+#: src/ui/dongle-dialog.blp:37
+msgid ""
+"Updates are published only for Windows and macOS, so this cannot be changed "
+"from here."
+msgstr "Updates verschijnen alleen voor Windows en macOS, dus dit is hiervandaan niet te wijzigen."
+
+#: src/ui/dongle-dialog.blp:45
+msgid "Serial Number"
+msgstr "Serienummer"
+
+#: src/ui/manual-dialog.blp:5 src/ui/window.blp:229
+msgid "Manual"
+msgstr "Handleiding"
+
+#: src/ui/manual-dialog.blp:19
+msgid "What the Light Means"
+msgstr "Wat het lampje betekent"
+
+#: src/ui/manual-dialog.blp:20
+msgid ""
+"The single LED on the dongle housing. The row the dongle is showing right "
+"now is marked."
+msgstr "De enige led op de behuizing van de dongle. De regel die de dongle op dit moment toont, is gemarkeerd."
+
+#: src/ui/manual-dialog.blp:28
+msgid "The Button"
+msgstr "De knop"
+
+#: src/ui/manual-dialog.blp:29
+msgid ""
+"The dongle has one button, and everything it does depends on how many times "
+"you press it."
+msgstr "De dongle heeft één knop, en alles wat hij doet hangt af van hoe vaak je erop drukt."
+
+#: src/ui/manual-dialog.blp:32
+msgid "Press once"
+msgstr "Eenmaal drukken"
+
+#: src/ui/manual-dialog.blp:33
+msgid ""
+"Reconnect to your headphones. While audio is playing, switches to the next "
+"codec instead. During a call, mutes and unmutes you."
+msgstr "Opnieuw verbinden met je koptelefoon. Terwijl er geluid speelt, schakelt het in plaats daarvan naar de volgende codec. Tijdens een gesprek dempt en ontdempt het je."
+
+#: src/ui/manual-dialog.blp:38
+msgid "Press twice"
+msgstr "Tweemaal drukken"
+
+#: src/ui/manual-dialog.blp:39
+msgid ""
+"Enter or leave Auracast broadcasting, which plays to several pairs of "
+"headphones at once."
+msgstr "De Auracast-uitzending in- of uitschakelen, die naar meerdere koptelefoons tegelijk speelt."
+
+#: src/ui/manual-dialog.blp:44
+msgid "Press three times"
+msgstr "Driemaal drukken"
+
+#: src/ui/manual-dialog.blp:45
+msgid ""
+"Enter or leave gaming mode. Same as the Audio Mode setting in the main "
+"window."
+msgstr "De gamemodus in- of uitschakelen. Hetzelfde als de instelling Audiomodus in het hoofdvenster."
+
+#: src/ui/manual-dialog.blp:50
+msgid "Press four times"
+msgstr "Viermaal drukken"
+
+#: src/ui/manual-dialog.blp:51
+msgid "Switch from the call profile (HFP) to the music profile (A2DP)."
+msgstr "Van het gespreksprofiel (HFP) naar het muziekprofiel (A2DP) schakelen."
+
+#: src/ui/manual-dialog.blp:56
+msgid "Hold for 3 seconds"
+msgstr "3 seconden ingedrukt houden"
+
+#: src/ui/manual-dialog.blp:57
+msgid ""
+"Start pairing. The LED alternates red and white while it looks for "
+"headphones."
+msgstr "Koppelen starten. De led wisselt tussen rood en wit terwijl hij naar een koptelefoon zoekt."
+
+#: src/ui/manual-dialog.blp:62
+msgid "Hold for 10 seconds"
+msgstr "10 seconden ingedrukt houden"
+
+#: src/ui/manual-dialog.blp:63
+msgid "Reset to factory settings. The LED flashes pink 3× when it is done."
+msgstr "Terugzetten op de fabrieksinstellingen. De led knippert 3× roze als het klaar is."
+
+#: src/ui/manual-dialog.blp:73 src/ui/window.vala:135
+msgid "Pairing"
+msgstr "Koppelen"
+
+#: src/ui/manual-dialog.blp:76
+msgid "The dongle remembers exactly one pair of headphones"
+msgstr "De dongle onthoudt precies één koptelefoon"
+
+#: src/ui/manual-dialog.blp:77
+msgid ""
+"Pairing with a new pair overwrites the old one. There is no list to choose "
+"from, and nothing to delete."
+msgstr "Een nieuwe koptelefoon koppelen overschrijft de vorige. Er is geen lijst om uit te kiezen, en niets te verwijderen."
+
+#: src/ui/manual-dialog.blp:82
+msgid "It reconnects on its own"
+msgstr "Hij verbindt vanzelf opnieuw"
+
+#: src/ui/manual-dialog.blp:83
+msgid ""
+"Plug it into any computer and it searches for its remembered headphones for "
+"about 20 seconds."
+msgstr "Steek hem in een willekeurige computer en hij zoekt ongeveer 20 seconden naar de koptelefoon die hij onthouden heeft."
+
+#: src/ui/manual-dialog.blp:93
+msgid "Codecs"
+msgstr "Codecs"
+
+#: src/ui/manual-dialog.blp:96
+msgid "The dongle picks the best one both ends support"
+msgstr "De dongle kiest de beste die beide kanten ondersteunen"
+
+#: src/ui/manual-dialog.blp:97
+msgid ""
+"In descending order: LC3, aptX Adaptive, aptX Lossless, aptX Classic, SBC. "
+"The Codec setting lets you override that choice."
+msgstr "In aflopende volgorde: LC3, aptX Adaptive, aptX Lossless, aptX Classic, SBC. Met de instelling Codec kun je die keuze overrulen."
+
+#: src/ui/manual-dialog.blp:107
+msgid "Good to Know"
+msgstr "Goed om te weten"
+
+#: src/ui/manual-dialog.blp:110
+msgid "The audio mode only changes while sound is playing"
+msgstr "De audiomodus verandert alleen terwijl er geluid speelt"
+
+#: src/ui/manual-dialog.blp:111
+msgid ""
+"The dongle refuses to switch between high quality, gaming and broadcasting "
+"unless it is actively streaming audio. Start playback first, then change the "
+"mode."
+msgstr "De dongle weigert tussen hoge kwaliteit, gamen en uitzenden te wisselen zolang hij niet daadwerkelijk audio doorgeeft. Start eerst het afspelen en wijzig daarna de modus."
+
+#: src/ui/manual-dialog.blp:116
+msgid "Permission is needed to reach the dongle"
+msgstr "Er is toestemming nodig om de dongle te bereiken"
+
+#: src/ui/manual-dialog.blp:117
+msgid ""
+"Appairée cannot talk to the dongle until the file 99-btd700.rules, which "
+"ships with Appairée, is copied into /etc/udev/rules.d. Without it, the "
+"dongle is never found even when it is plugged in."
+msgstr "Appairée kan niet met de dongle praten zolang het bestand 99-btd700.rules, dat met Appairée wordt meegeleverd, niet naar /etc/udev/rules.d is gekopieerd. Zonder dat bestand wordt de dongle nooit gevonden, ook niet als hij erin zit."
+
+#: src/ui/manual-dialog.blp:122
+msgid "Range"
+msgstr "Bereik"
+
+#: src/ui/manual-dialog.blp:123
+msgid ""
+"The manual contradicts itself: up to 10 metres line of sight on one page, up "
+"to 50 metres in the specifications on another."
+msgstr "De handleiding spreekt zichzelf tegen: tot 10 meter in het zicht op de ene pagina, tot 50 meter in de specificaties op een andere."
+
+#: src/ui/manual-dialog.blp:128
+msgid "No driver is needed for sound"
+msgstr "Voor geluid is geen stuurprogramma nodig"
+
+#: src/ui/manual-dialog.blp:129
+msgid ""
+"Linux already treats the dongle as a USB sound card. Appairée only changes "
+"settings stored inside it."
+msgstr "Linux behandelt de dongle al als een USB-geluidskaart. Appairée wijzigt alleen de instellingen die erin zijn opgeslagen."
+
+#: src/ui/manual-dialog.vala:50
+msgid "The dongle is showing this right now"
+msgstr "De dongle toont dit op dit moment"
+
+#: src/ui/window.blp:16
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: src/ui/window.blp:29
+msgid "No Dongle Found"
+msgstr "Geen dongle gevonden"
+
+#: src/ui/window.blp:30 src/ui/window.vala:222
+msgid "Plug in a Sennheiser BTD 700 and it will appear here."
+msgstr "Sluit een Sennheiser BTD 700 aan en hij verschijnt hier."
+
+#: src/ui/window.blp:39
+msgid ""
+"If it is already plugged in, Appairée is not allowed to open it. Linux needs "
+"a udev rule for that, and no application can install one for itself. Run "
+"this once, then unplug and replug the dongle:"
+msgstr "Zit hij er al in, dan mag Appairée hem niet openen. Linux heeft daarvoor een udev-regel nodig, en geen enkele toepassing kan er zelf een installeren. Voer dit één keer uit en koppel de dongle daarna los en weer aan:"
+
+#: src/ui/window.blp:60 src/ui/window.vala:253
+msgid "Copy Command"
+msgstr "Opdracht kopiëren"
+
+#: src/ui/window.blp:77
+msgid ""
+"The dongle ignored that. Its audio mode can only be changed while sound is "
+"playing through it."
+msgstr "De dongle heeft dat genegeerd. Zijn audiomodus kan alleen worden gewijzigd terwijl er geluid doorheen gaat."
+
+#: src/ui/window.blp:85
+msgid "Status Light"
+msgstr "Statuslampje"
+
+#: src/ui/window.blp:90
+msgid "What the light on the dongle is showing right now."
+msgstr "Wat het lampje op de dongle op dit moment toont."
+
+#: src/ui/window.blp:93
+msgid "Reading the dongle…"
+msgstr "Dongle wordt uitgelezen…"
+
+#: src/ui/window.blp:109
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/ui/window.blp:110
+msgid ""
+"Stored in the dongle itself, so they follow it from one computer to another."
+msgstr "Opgeslagen in de dongle zelf, dus ze reizen met hem mee van de ene computer naar de andere."
+
+#: src/ui/window.blp:113
+msgid "Audio Mode"
+msgstr "Audiomodus"
+
+#: src/ui/window.blp:119
+msgid ""
+"High Quality, Gaming for low latency, or Auracast Broadcasting to several "
+"headphones at once."
+msgstr "Hoge kwaliteit, Gamen voor lage latentie, of Auracast-uitzending naar meerdere koptelefoons tegelijk."
+
+#: src/ui/window.blp:123
+msgid "High Quality"
+msgstr "Hoge kwaliteit"
+
+#: src/ui/window.blp:124
+msgid "Gaming"
+msgstr "Gamen"
+
+#: src/ui/window.blp:125
+msgid "Auracast Broadcasting"
+msgstr "Auracast-uitzending"
+
+#: src/ui/window.blp:131
+msgid "Codec"
+msgstr "Codec"
+
+#: src/ui/window.blp:137
+msgid "Only codecs your headphones also support are listed."
+msgstr "Alleen codecs die je koptelefoon ook ondersteunt worden getoond."
+
+#: src/ui/window.blp:142
+msgid "Status"
+msgstr "Status"
+
+#: src/ui/window.blp:147
+msgid "Read from the dongle. These cannot be changed here."
+msgstr "Uitgelezen van de dongle. Deze waarden zijn hier niet te wijzigen."
+
+#: src/ui/window.blp:150
+msgid "Connection"
+msgstr "Verbinding"
+
+#: src/ui/window.blp:156
+msgid ""
+"Disconnected, Connected when paired but idle, Streaming Audio while music is "
+"playing, or Streaming Voice during a call."
+msgstr "Losgekoppeld, Verbonden als hij gekoppeld maar inactief is, Audio streamen terwijl er muziek speelt, of Spraak streamen tijdens een gesprek."
+
+#: src/ui/window.blp:163
+msgid "LE Audio"
+msgstr "LE Audio"
+
+#: src/ui/window.blp:169
+msgid ""
+"The newer Bluetooth Low Energy audio path: Disconnected, Connected, "
+"Streaming Unicast to your headphones, or Streaming Broadcast for Auracast."
+msgstr "Het nieuwere Bluetooth Low Energy-audiokanaal: Losgekoppeld, Verbonden, Unicast streamen naar je koptelefoon, of Broadcast streamen voor Auracast."
+
+#: src/ui/window.blp:176
+msgid "Bluetooth Mode"
+msgstr "Bluetooth-modus"
+
+#: src/ui/window.blp:182
+msgid ""
+"Which radio link is carrying the sound: Classic, LE Audio, or Multipoint for "
+"two devices at once. The dongle decides this itself and it cannot be forced."
+msgstr "Welke radioverbinding het geluid draagt: Classic, LE Audio, of Multipoint voor twee apparaten tegelijk. De dongle bepaalt dit zelf en het kan niet worden afgedwongen."
+
+#: src/ui/window.blp:189
+msgid "Audio Sink"
+msgstr "Audio-uitgang"
+
+#: src/ui/window.blp:195
+msgid ""
+"Which paths the dongle is offering to headphones right now: Classic, LE "
+"Audio, Dual for both at once, or Not Available when nothing is connected."
+msgstr "Welke kanalen de dongle op dit moment aan koptelefoons aanbiedt: Classic, LE Audio, Dual voor allebei tegelijk, of Niet beschikbaar als er niets verbonden is."
+
+#: src/ui/window.blp:202
+msgid "Quality"
+msgstr "Kwaliteit"
+
+#: src/ui/window.blp:208
+msgid ""
+"The sample rate and bit depth this computer is sending to the dongle: 44.1, "
+"48 or 96 kHz, at 16 or 24 bits."
+msgstr "De samplefrequentie en bitdiepte die deze computer naar de dongle stuurt: 44,1, 48 of 96 kHz, met 16 of 24 bits."
+
+#: src/ui/window.blp:235
+msgid "Language"
+msgstr "Taal"
+
+#: src/ui/window.blp:278
+msgid "_About Appairée"
+msgstr "_Over Appairée"
+
+#: src/ui/window.vala:171
+msgid "No dongle connected"
+msgstr "Geen dongle verbonden"
+
+#: src/ui/window.vala:172
+msgid "The light cannot be read in this state"
+msgstr "Het lampje is in deze toestand niet af te leiden"
+
+#: src/ui/window.vala:225
+#, c-format
+msgid "The dongle could not be opened: %s"
+msgstr "De dongle kon niet worden geopend: %s"
+
+#: src/ui/window.vala:251
+msgid "Copied"
+msgstr "Gekopieerd"

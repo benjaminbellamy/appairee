@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/fr/benjaminbellamy/Appairee">
+    <file alias="window.ui">ui/window.ui</file>
+    <file alias="about-dialog.ui">ui/about-dialog.ui</file>
+    <file alias="dongle-dialog.ui">ui/dongle-dialog.ui</file>
+    <file alias="manual-dialog.ui">ui/manual-dialog.ui</file>
+    <file alias="style.css" compressed="true">style.css</file>
+  </gresource>
+  <gresource prefix="/fr/benjaminbellamy/Appairee/icons/scalable/actions">
+    <file alias="appairee-dongle-symbolic.svg" preprocess="xml-stripblanks">icons/scalable/actions/appairee-dongle-symbolic.svg</file>
+    <file alias="appairee-dongle-led-symbolic.svg" preprocess="xml-stripblanks">icons/scalable/actions/appairee-dongle-led-symbolic.svg</file>
+  </gresource>
+</gresources>

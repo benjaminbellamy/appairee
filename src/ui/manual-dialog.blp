@@ -1,0 +1,135 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $AppaireeManualDialog: Adw.Dialog {
+  title: _("Manual");
+  content-width: 560;
+  content-height: 720;
+
+  child: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    content: Adw.PreferencesPage {
+      Adw.PreferencesGroup led_group {
+        styles [
+          "readonly-group",
+        ]
+
+        title: _("What the Light Means");
+        description: _("The single LED on the dongle housing. The row the dongle is showing right now is marked.");
+      }
+
+      Adw.PreferencesGroup {
+        styles [
+          "readonly-group",
+        ]
+
+        title: _("The Button");
+        description: _("The dongle has one button, and everything it does depends on how many times you press it.");
+
+        Adw.ActionRow {
+          title: _("Press once");
+          subtitle: _("Reconnect to your headphones. While audio is playing, switches to the next codec instead. During a call, mutes and unmutes you.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("Press twice");
+          subtitle: _("Enter or leave Auracast broadcasting, which plays to several pairs of headphones at once.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("Press three times");
+          subtitle: _("Enter or leave gaming mode. Same as the Audio Mode setting in the main window.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("Press four times");
+          subtitle: _("Switch from the call profile (HFP) to the music profile (A2DP).");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("Hold for 3 seconds");
+          subtitle: _("Start pairing. The LED alternates red and white while it looks for headphones.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("Hold for 10 seconds");
+          subtitle: _("Reset to factory settings. The LED flashes pink 3× when it is done.");
+          subtitle-lines: 0;
+        }
+      }
+
+      Adw.PreferencesGroup {
+        styles [
+          "readonly-group",
+        ]
+
+        title: _("Pairing");
+
+        Adw.ActionRow {
+          title: _("The dongle remembers exactly one pair of headphones");
+          subtitle: _("Pairing with a new pair overwrites the old one. There is no list to choose from, and nothing to delete.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("It reconnects on its own");
+          subtitle: _("Plug it into any computer and it searches for its remembered headphones for about 20 seconds.");
+          subtitle-lines: 0;
+        }
+      }
+
+      Adw.PreferencesGroup {
+        styles [
+          "readonly-group",
+        ]
+
+        title: _("Codecs");
+
+        Adw.ActionRow {
+          title: _("The dongle picks the best one both ends support");
+          subtitle: _("In descending order: LC3, aptX Adaptive, aptX Lossless, aptX Classic, SBC. The Codec setting lets you override that choice.");
+          subtitle-lines: 0;
+        }
+      }
+
+      Adw.PreferencesGroup {
+        styles [
+          "readonly-group",
+        ]
+
+        title: _("Good to Know");
+
+        Adw.ActionRow {
+          title: _("The audio mode only changes while sound is playing");
+          subtitle: _("The dongle refuses to switch between high quality, gaming and broadcasting unless it is actively streaming audio. Start playback first, then change the mode.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("Permission is needed to reach the dongle");
+          subtitle: _("Appairée cannot talk to the dongle until the file 99-btd700.rules, which ships with Appairée, is copied into /etc/udev/rules.d. Without it, the dongle is never found even when it is plugged in.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("Range");
+          subtitle: _("The manual contradicts itself: up to 10 metres line of sight on one page, up to 50 metres in the specifications on another.");
+          subtitle-lines: 0;
+        }
+
+        Adw.ActionRow {
+          title: _("No driver is needed for sound");
+          subtitle: _("Linux already treats the dongle as a USB sound card. Appairée only changes settings stored inside it.");
+          subtitle-lines: 0;
+        }
+      }
+    };
+  };
+}

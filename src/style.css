@@ -1,0 +1,64 @@
+/* The swatch is the dongle itself, drawn from the same artwork as the app icon:
+ * the body in one colour, the light window overlaid in another. Showing the
+ * light inside the dark body is not decoration — white, dim white and "off" are
+ * all invisible on a light window, and the app has to work in both themes. */
+.led-body {
+  /* Dark in a light theme, and lifted just enough in a dark one that the
+     silhouette does not vanish into the background. */
+  color: mix(#1c1b1f, @window_fg_color, 0.18);
+}
+
+/* Declared before the colours so that an entry's own class wins. With no
+ * colour class the light is simply not lit. */
+.led-light {
+  color: transparent;
+}
+
+.led-red    { color: #e01b24; }
+.led-white  { color: #ffffff; }
+.led-blue   { color: #3584e4; }
+.led-pink   { color: #f06eb0; }
+.led-purple { color: #9141ac; }
+.led-amber  { color: #ff7800; }
+.led-green  { color: #33d17a; }
+.led-off    { color: transparent; }
+
+/* "Lights up dimly" is a state of its own in the manual, distinct from lit. */
+.led-dim { opacity: 0.35; }
+
+/* Blinking is driven from LedAnimator in led.vala, not from CSS: GTK does not
+ * re-render a GtkImage for a CSS animation, so an animated colour or opacity
+ * would simply sit at one value. */
+
+@define-color readonly_line alpha(currentColor, 0.13);
+
+/* Readings, not controls. A raised white card is libadwaita's signal for "you
+ * can change this", so the rows you cannot change sit flat and slightly grey
+ * against the window instead. currentColor keeps it correct in both themes:
+ * a dark tint on a light window, a light tint on a dark one. */
+/* The rows stay clear so the tint is applied once, by the list underneath them,
+   rather than twice over. */
+.readonly-group .boxed-list > row {
+  background-color: transparent;
+}
+
+.readonly-group .boxed-list {
+  /* Just off the window colour. 0.05 read as a grey panel, transparent read as
+     nothing at all; this is the small nudge between the two. */
+  background-color: alpha(currentColor, 0.02);
+}
+
+.readonly-group .boxed-list {
+  /* No fill, so the block sits on the window rather than on a card, which is
+     what tells you it is a reading rather than a control. */
+  border: 1px solid @readonly_line;
+  box-shadow: 0 1px 2px alpha(currentColor, 0.09);
+}
+
+/* The separators are drawn in the same colour as the outer border, and with the
+   same property, so that whichever one the theme happens to use is replaced
+   rather than added to. */
+.readonly-group .boxed-list > row:not(:last-child) {
+  box-shadow: none;
+  border-bottom: 1px solid @readonly_line;
+}

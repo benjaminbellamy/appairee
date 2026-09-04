@@ -1,0 +1,282 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $AppaireeWindow: Adw.ApplicationWindow {
+  title: _("Appairée");
+  width-request: 360;
+  height-request: 400;
+
+  content: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      [end]
+      MenuButton menu_button {
+        primary: true;
+        icon-name: "open-menu-symbolic";
+        tooltip-text: _("Main Menu");
+        menu-model: primary_menu;
+      }
+    }
+
+    content: Stack device_stack {
+      transition-type: crossfade;
+
+      StackPage {
+        name: "absent";
+
+        child: Adw.StatusPage absent_page {
+          icon-name: "fr.benjaminbellamy.Appairee-symbolic";
+          title: _("No Dongle Found");
+          description: _("Plug in a Sennheiser BTD 700 and it will appear here.");
+
+          child: Box permission_box {
+            orientation: vertical;
+            spacing: 12;
+            halign: center;
+            visible: false;
+
+            Label {
+              label: _("If it is already plugged in, Appairée is not allowed to open it. Linux needs a udev rule for that, and no application can install one for itself. Run this once, then unplug and replug the dongle:");
+              wrap: true;
+              justify: center;
+              max-width-chars: 46;
+            }
+
+            Label udev_command {
+              selectable: true;
+              wrap: true;
+              wrap-mode: word_char;
+              xalign: 0;
+              max-width-chars: 52;
+
+              styles [
+                "monospace",
+                "dim-label",
+              ]
+            }
+
+            Button copy_button {
+              halign: center;
+              label: _("Copy Command");
+
+              styles [
+                "pill",
+              ]
+            }
+          };
+        };
+      }
+
+      StackPage {
+        name: "present";
+
+        child: Box {
+          orientation: vertical;
+
+          Adw.Banner rejected_banner {
+            title: _("The dongle ignored that. Its audio mode can only be changed while sound is playing through it.");
+            revealed: false;
+          }
+
+          Adw.PreferencesPage {
+            vexpand: true;
+
+            Adw.PreferencesGroup {
+              title: _("Status Light");
+
+              styles [
+                "readonly-group",
+              ]
+              tooltip-text: _("What the light on the dongle is showing right now.");
+
+              Adw.ActionRow led_row {
+                title: _("Reading the dongle…");
+                activatable: true;
+                action-name: "win.manual";
+
+                [suffix]
+                Image {
+                  icon-name: "go-next-symbolic";
+
+                  styles [
+                    "dim-label",
+                  ]
+                }
+              }
+            }
+
+            Adw.PreferencesGroup {
+              title: _("Settings");
+              tooltip-text: _("Stored in the dongle itself, so they follow it from one computer to another.");
+
+              Adw.ComboRow mode_row {
+                title: _("Audio Mode");
+
+                [prefix]
+                Image {
+                  icon-name: "input-gaming-symbolic";
+                }
+                tooltip-text: _("High Quality, Gaming for low latency, or Auracast Broadcasting to several headphones at once.");
+
+                model: StringList {
+                  strings [
+                    _("High Quality"),
+                    _("Gaming"),
+                    _("Auracast Broadcasting"),
+                  ]
+                };
+              }
+
+              Adw.ComboRow codec_row {
+                title: _("Codec");
+
+                [prefix]
+                Image {
+                  icon-name: "audio-x-generic-symbolic";
+                }
+                tooltip-text: _("Only codecs your headphones also support are listed.");
+              }
+            }
+
+            Adw.PreferencesGroup {
+              title: _("Status");
+
+              styles [
+                "readonly-group",
+              ]
+              tooltip-text: _("Read from the dongle. These cannot be changed here.");
+
+              Adw.ActionRow {
+                title: _("Connection");
+
+                [prefix]
+                Image {
+                  icon-name: "network-wireless-symbolic";
+                }
+                tooltip-text: _("Disconnected, Connected when paired but idle, Streaming Audio while music is playing, or Streaming Voice during a call.");
+
+                [suffix]
+                Label state_label {}
+              }
+
+              Adw.ActionRow {
+                title: _("LE Audio");
+
+                [prefix]
+                Image {
+                  icon-name: "battery-symbolic";
+                }
+                tooltip-text: _("The newer Bluetooth Low Energy audio path: Disconnected, Connected, Streaming Unicast to your headphones, or Streaming Broadcast for Auracast.");
+
+                [suffix]
+                Label le_audio_label {}
+              }
+
+              Adw.ActionRow {
+                title: _("Bluetooth Mode");
+
+                [prefix]
+                Image {
+                  icon-name: "bluetooth-symbolic";
+                }
+                tooltip-text: _("Which radio link is carrying the sound: Classic, LE Audio, or Multipoint for two devices at once. The dongle decides this itself and it cannot be forced.");
+
+                [suffix]
+                Label transport_label {}
+              }
+
+              Adw.ActionRow {
+                title: _("Audio Sink");
+
+                [prefix]
+                Image {
+                  icon-name: "audio-headphones-symbolic";
+                }
+                tooltip-text: _("Which paths the dongle is offering to headphones right now: Classic, LE Audio, Dual for both at once, or Not Available when nothing is connected.");
+
+                [suffix]
+                Label sink_label {}
+              }
+
+              Adw.ActionRow {
+                title: _("Quality");
+
+                [prefix]
+                Image {
+                  icon-name: "media-optical-cd-audio-symbolic";
+                }
+                tooltip-text: _("The sample rate and bit depth this computer is sending to the dongle: 44.1, 48 or 96 kHz, at 16 or 24 bits.");
+
+                [suffix]
+                Label quality_label {}
+              }
+            }
+          }
+        };
+      }
+    };
+  };
+}
+
+menu primary_menu {
+  section {
+    item {
+      label: _("About Dongle");
+      action: "win.about-dongle";
+    }
+
+    item {
+      label: _("Manual");
+      action: "win.manual";
+    }
+  }
+
+  submenu {
+    label: _("Language");
+
+    section {
+      item {
+        label: "English";
+        action: "app.language";
+        target: "en";
+      }
+
+      item {
+        label: "Français";
+        action: "app.language";
+        target: "fr";
+      }
+
+      item {
+        label: "Deutsch";
+        action: "app.language";
+        target: "de";
+      }
+
+      item {
+        label: "Español";
+        action: "app.language";
+        target: "es";
+      }
+
+      item {
+        label: "Italiano";
+        action: "app.language";
+        target: "it";
+      }
+
+      item {
+        label: "Nederlands";
+        action: "app.language";
+        target: "nl";
+      }
+    }
+  }
+
+  section {
+    item {
+      label: _("_About Appairée");
+      action: "app.about";
+    }
+  }
+}

@@ -1,0 +1,15 @@
+data/fr.benjaminbellamy.Appairee.desktop.in
+data/fr.benjaminbellamy.Appairee.gschema.xml
+data/fr.benjaminbellamy.Appairee.metainfo.xml.in
+src/application.vala
+src/device.vala
+src/led.vala
+src/main.vala
+src/ui/about-dialog.blp
+src/ui/about-dialog.vala
+src/ui/dongle-dialog.blp
+src/ui/dongle-dialog.vala
+src/ui/manual-dialog.blp
+src/ui/manual-dialog.vala
+src/ui/window.blp
+src/ui/window.vala
