@@ -2,6 +2,7 @@ build/
 build-flatpak/
 build-deb/
 build-flatpak-repo/
+build-rpm/
 .flatpak-builder/
 repo/
 *.flatpak

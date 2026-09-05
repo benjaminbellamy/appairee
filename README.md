@@ -57,6 +57,16 @@ curl -L -o /tmp/appairee.deb \
     && sudo apt install /tmp/appairee.deb
 ```
 
+### Fedora
+
+Same bargain as the Debian package: the udev rule comes with it.
+
+```bash
+curl -L -o /tmp/appairee.rpm \
+    https://github.com/benjaminbellamy/appairee/releases/download/1.0.0/appairee-1.0.0-1.fc44.x86_64.rpm \
+    && sudo dnf install /tmp/appairee.rpm
+```
+
 ### Flatpak
 
 Any distribution, at the cost of the udev rule: a Flatpak cannot write to `/etc` or
@@ -75,6 +85,14 @@ curl -L -o /tmp/appairee.flatpak \
 
 ```bash
 sudo apt remove appairee
+```
+
+The udev rule was installed by the package, so it goes with it.
+
+### Fedora
+
+```bash
+sudo dnf remove appairee
 ```
 
 The udev rule was installed by the package, so it goes with it.
@@ -110,6 +128,13 @@ To build the packages instead:
 ```bash
 ./build-aux/deb/build-deb.sh                 # a .deb, udev rule included
 ./build-aux/flatpak/build-bundle.sh          # a single-file .flatpak bundle
+```
+
+On Fedora, `build-aux/rpm/appairee.spec` builds an RPM from a release tarball, and
+is also what a Copr build would consume:
+
+```bash
+rpmbuild -ba build-aux/rpm/appairee.spec
 ```
 
 ## The udev rule
