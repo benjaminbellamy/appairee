@@ -32,6 +32,8 @@ namespace Appairee {
         [GtkChild] private unowned Adw.ActionRow led_row;
         [GtkChild] private unowned Adw.ComboRow mode_row;
         [GtkChild] private unowned Adw.ComboRow codec_row;
+        [GtkChild] private unowned Adw.ActionRow volume_row;
+        [GtkChild] private unowned Gtk.Scale volume_scale;
         [GtkChild] private unowned Gtk.Label state_label;
         [GtkChild] private unowned Gtk.Label le_audio_label;
         [GtkChild] private unowned Gtk.Label transport_label;
@@ -53,6 +55,16 @@ namespace Appairee {
          * choosing it. */
         private bool syncing = false;
 
+        /* The same guard for the volume slider, which arrives on its own signal
+         * rather than with a snapshot. Without it, showing the level the dongle
+         * reports would immediately be sent back to the dongle as a change. */
+        private bool syncing_volume = false;
+
+        /* The decibel figure for each step, as the dongle reports it, indexed
+         * from volume_floor. Kept so the row can be labelled while dragging. */
+        private long[] volume_millibels = {};
+        private long volume_floor = 0;
+
         public Window (Gtk.Application app) {
             Object (application: app);
         }
@@ -73,7 +85,10 @@ namespace Appairee {
             mode_row.notify["selected"].connect (on_mode_selected);
             codec_row.notify["selected"].connect (on_codec_selected);
 
+            volume_scale.value_changed.connect (on_volume_changed);
+
             device.updated.connect (on_device_updated);
+            device.volume_updated.connect (on_volume_updated);
             device.mode_rejected.connect (() => {
                 rejected_banner.revealed = true;
             });
@@ -203,6 +218,46 @@ namespace Appairee {
             }
             rejected_banner.revealed = false;
             device.request_audio_mode ((Btd700.AudioMode) mode_row.selected);
+        }
+
+        private void on_volume_updated (VolumeState state) {
+            volume_row.visible = state.available;
+            if (!state.available) {
+                return;
+            }
+
+            volume_millibels = state.millibels;
+            volume_floor = state.min;
+
+            syncing_volume = true;
+            volume_scale.set_range ((double) state.min, (double) state.max);
+            volume_scale.set_increments (1, 1);
+            volume_scale.set_value ((double) state.value);
+            syncing_volume = false;
+        }
+
+        private void on_volume_changed () {
+            long step = (long) Math.round (volume_scale.get_value ());
+
+            /* Updated even while syncing, so the row follows the slider as it
+             * is dragged rather than waiting for the dongle to be read back. */
+            volume_row.subtitle = describe_level (step);
+
+            if (syncing_volume) {
+                return;
+            }
+            device.request_volume (step);
+        }
+
+        /* The dongle reports hundredths of a decibel and its own step is the
+         * unit the slider moves in, so neither number is scaled on the way in
+         * or on the way out. */
+        private string describe_level (long step) {
+            var index = (int) (step - volume_floor);
+            if (index < 0 || index >= volume_millibels.length) {
+                return "";
+            }
+            return _("%.2f dB").printf (volume_millibels[index] / 100.0);
         }
 
         private void on_codec_selected () {

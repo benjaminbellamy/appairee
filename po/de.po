@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: appairee 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-04 00:00+0000\n"
+"POT-Creation-Date: 2026-09-06 16:47+0200\n"
 "PO-Revision-Date: 2026-09-04 00:00+0000\n"
 "Last-Translator: Benjamin Bellamy <benjamin@castopod.org>\n"
 "Language-Team: DE\n"
@@ -15,7 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
 
 #: data/fr.benjaminbellamy.Appairee.desktop.in:3
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:6
@@ -79,7 +78,11 @@ msgid ""
 "USB sound card. What no Linux software can reach are the settings stored "
 "inside the dongle itself, which Sennheiser exposes only through its Windows "
 "and macOS Dongle Control application."
-msgstr "Der Sennheiser BTD 700 braucht unter Linux keinen Treiber: Er erscheint als gewöhnliche USB-Soundkarte. Was keine Linux-Software erreicht, sind die im Dongle selbst gespeicherten Einstellungen, die Sennheiser nur über seine Dongle-Control-Anwendung für Windows und macOS zugänglich macht."
+msgstr ""
+"Der Sennheiser BTD 700 braucht unter Linux keinen Treiber: Er erscheint als "
+"gewöhnliche USB-Soundkarte. Was keine Linux-Software erreicht, sind die im "
+"Dongle selbst gespeicherten Einstellungen, die Sennheiser nur über seine "
+"Dongle-Control-Anwendung für Windows und macOS zugänglich macht."
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:23
 msgid ""
@@ -87,7 +90,12 @@ msgid ""
 "you are monitoring audio, pick the Bluetooth codec, and read back what the "
 "dongle is actually doing. Settings are stored in the dongle's own firmware, "
 "so they follow it from one computer to another."
-msgstr "Appairée erreicht sie. Schalten Sie den Dongle für geringe Latenz in den Spielemodus, wenn Sie sich selbst abhören, wählen Sie den Bluetooth-Codec und lesen Sie zurück, was der Dongle tatsächlich tut. Die Einstellungen liegen in der Firmware des Dongles und folgen ihm von einem Rechner zum nächsten."
+msgstr ""
+"Appairée erreicht sie. Schalten Sie den Dongle für geringe Latenz in den "
+"Spielemodus, wenn Sie sich selbst abhören, wählen Sie den Bluetooth-Codec "
+"und lesen Sie zurück, was der Dongle tatsächlich tut. Die Einstellungen "
+"liegen in der Firmware des Dongles und folgen ihm von einem Rechner zum "
+"nächsten."
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:29
 msgid ""
@@ -95,7 +103,11 @@ msgid ""
 "LED, and the printed manual scatters their meanings across a dozen pages: "
 "Appairée collects the full LED colour legend and every button gesture into "
 "two pages you can actually read."
-msgstr "Sie erklärt auch die Hardware. Der Dongle hat eine einzige Taste und eine Status-LED, und das gedruckte Handbuch verteilt deren Bedeutung über ein Dutzend Seiten: Appairée fasst die vollständige Farblegende der LED und jeden Tastendruck auf zwei lesbaren Seiten zusammen."
+msgstr ""
+"Sie erklärt auch die Hardware. Der Dongle hat eine einzige Taste und eine "
+"Status-LED, und das gedruckte Handbuch verteilt deren Bedeutung über ein "
+"Dutzend Seiten: Appairée fasst die vollständige Farblegende der LED und "
+"jeden Tastendruck auf zwei lesbaren Seiten zusammen."
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:35
 msgid "Features:"
@@ -103,55 +115,74 @@ msgstr "Funktionen:"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:37
 msgid "Audio mode: high quality, gaming (low latency) or Auracast broadcasting"
-msgstr "Audiomodus: hohe Qualität, Spiele (geringe Latenz) oder Auracast-Übertragung"
+msgstr ""
+"Audiomodus: hohe Qualität, Spiele (geringe Latenz) oder Auracast-Übertragung"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:38
 msgid "Bluetooth codec selection among those the dongle supports"
 msgstr "Auswahl des Bluetooth-Codecs unter denen, die der Dongle unterstützt"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:39
-msgid ""
-"Device information: model, serial number, firmware version and live state"
-msgstr "Geräteinformationen: Modell, Seriennummer, Firmware-Version und Live-Status"
+msgid "Volume: the dongle's own output level, in the decibel steps it reports"
+msgstr ""
+"Lautstärke: der Ausgangspegel des Dongles selbst, in den Dezibelstufen, die "
+"er meldet"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:40
 msgid ""
-"The complete status LED colour legend, with the current state highlighted"
-msgstr "Die vollständige Farblegende der Status-LED, mit hervorgehobenem aktuellem Zustand"
+"Device information: model, serial number, firmware version and live state"
+msgstr ""
+"Geräteinformationen: Modell, Seriennummer, Firmware-Version und Live-Status"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:41
+msgid ""
+"The complete status LED colour legend, with the current state highlighted"
+msgstr ""
+"Die vollständige Farblegende der Status-LED, mit hervorgehobenem aktuellem "
+"Zustand"
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:42
 msgid "A help page summarising the manual's button gestures"
 msgstr "Eine Hilfeseite, die die Tastendrücke aus dem Handbuch zusammenfasst"
 
-#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:43
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:44
 msgid ""
 "The dongle protocol is implemented by btd700ctl, an unofficial driver by "
 "sobalap. Appairée is an independent project and is not affiliated with, "
 "endorsed by, or supported by Sennheiser or Sonova Consumer Hearing GmbH."
-msgstr "Das Dongle-Protokoll stammt von btd700ctl, einem inoffiziellen Treiber von sobalap. Appairée ist ein unabhängiges Projekt und steht in keiner Verbindung zu Sennheiser oder Sonova Consumer Hearing GmbH und wird von diesen weder unterstützt noch empfohlen."
+msgstr ""
+"Das Dongle-Protokoll stammt von btd700ctl, einem inoffiziellen Treiber von "
+"sobalap. Appairée ist ein unabhängiges Projekt und steht in keiner "
+"Verbindung zu Sennheiser oder Sonova Consumer Hearing GmbH und wird von "
+"diesen weder unterstützt noch empfohlen."
 
-#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:66
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:58
+msgid "The status light, the settings, and what the dongle reports"
+msgstr ""
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:74
 msgid "bluetooth"
 msgstr "bluetooth"
 
-#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:67
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:75
 msgid "dongle"
 msgstr "dongle"
 
-#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:68
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:76
 msgid "audio"
 msgstr "audio"
 
-#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:69
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:77
 msgid "codec"
 msgstr "codec"
 
-#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:70
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:78
 msgid "aptX"
 msgstr "aptX"
 
-#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:86
-msgid "First development release."
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:94
+#, fuzzy
+msgid "First release."
 msgstr "Erste Entwicklungsversion."
 
 #: src/led.vala:238
@@ -303,7 +334,10 @@ msgid ""
 "Appairée is only a window. Everything that actually talks to the dongle — "
 "the reverse-engineered HID protocol, the driver, the PipeWire daemon — is "
 "the work of sobalap, in btd700ctl."
-msgstr "Appairée ist nur ein Fenster. Alles, was tatsächlich mit dem Dongle spricht — das rückentwickelte HID-Protokoll, der Treiber, der PipeWire-Dienst — ist die Arbeit von sobalap in btd700ctl."
+msgstr ""
+"Appairée ist nur ein Fenster. Alles, was tatsächlich mit dem Dongle spricht "
+"— das rückentwickelte HID-Protokoll, der Treiber, der PipeWire-Dienst — ist "
+"die Arbeit von sobalap in btd700ctl."
 
 #: src/ui/about-dialog.blp:73
 msgid "The library this application is built on"
@@ -313,7 +347,7 @@ msgstr "Die Bibliothek, auf der diese Anwendung aufbaut"
 msgid "Legal"
 msgstr "Rechtliches"
 
-#: src/ui/dongle-dialog.blp:5 src/ui/window.blp:224
+#: src/ui/dongle-dialog.blp:5 src/ui/window.blp:247
 msgid "About Dongle"
 msgstr "Über den Dongle"
 
@@ -337,13 +371,15 @@ msgstr "Firmware"
 msgid ""
 "Updates are published only for Windows and macOS, so this cannot be changed "
 "from here."
-msgstr "Aktualisierungen erscheinen nur für Windows und macOS und lassen sich von hier aus nicht einspielen."
+msgstr ""
+"Aktualisierungen erscheinen nur für Windows und macOS und lassen sich von "
+"hier aus nicht einspielen."
 
 #: src/ui/dongle-dialog.blp:45
 msgid "Serial Number"
 msgstr "Seriennummer"
 
-#: src/ui/manual-dialog.blp:5 src/ui/window.blp:229
+#: src/ui/manual-dialog.blp:5 src/ui/window.blp:252
 msgid "Manual"
 msgstr "Handbuch"
 
@@ -355,7 +391,9 @@ msgstr "Was das Licht bedeutet"
 msgid ""
 "The single LED on the dongle housing. The row the dongle is showing right "
 "now is marked."
-msgstr "Die einzige LED am Gehäuse des Dongles. Die Zeile, die der Dongle gerade zeigt, ist markiert."
+msgstr ""
+"Die einzige LED am Gehäuse des Dongles. Die Zeile, die der Dongle gerade "
+"zeigt, ist markiert."
 
 #: src/ui/manual-dialog.blp:28
 msgid "The Button"
@@ -365,7 +403,9 @@ msgstr "Die Taste"
 msgid ""
 "The dongle has one button, and everything it does depends on how many times "
 "you press it."
-msgstr "Der Dongle hat eine einzige Taste, und alles hängt davon ab, wie oft Sie sie drücken."
+msgstr ""
+"Der Dongle hat eine einzige Taste, und alles hängt davon ab, wie oft Sie sie "
+"drücken."
 
 #: src/ui/manual-dialog.blp:32
 msgid "Press once"
@@ -375,7 +415,10 @@ msgstr "Einmal drücken"
 msgid ""
 "Reconnect to your headphones. While audio is playing, switches to the next "
 "codec instead. During a call, mutes and unmutes you."
-msgstr "Erneut mit den Kopfhörern verbinden. Während Musik läuft, wechselt es stattdessen zum nächsten Codec. Während eines Anrufs schaltet es stumm und wieder laut."
+msgstr ""
+"Erneut mit den Kopfhörern verbinden. Während Musik läuft, wechselt es "
+"stattdessen zum nächsten Codec. Während eines Anrufs schaltet es stumm und "
+"wieder laut."
 
 #: src/ui/manual-dialog.blp:38
 msgid "Press twice"
@@ -385,7 +428,9 @@ msgstr "Zweimal drücken"
 msgid ""
 "Enter or leave Auracast broadcasting, which plays to several pairs of "
 "headphones at once."
-msgstr "Auracast-Übertragung starten oder beenden, die an mehrere Kopfhörer gleichzeitig sendet."
+msgstr ""
+"Auracast-Übertragung starten oder beenden, die an mehrere Kopfhörer "
+"gleichzeitig sendet."
 
 #: src/ui/manual-dialog.blp:44
 msgid "Press three times"
@@ -395,7 +440,9 @@ msgstr "Dreimal drücken"
 msgid ""
 "Enter or leave gaming mode. Same as the Audio Mode setting in the main "
 "window."
-msgstr "Spielemodus starten oder beenden. Entspricht der Einstellung Audiomodus im Hauptfenster."
+msgstr ""
+"Spielemodus starten oder beenden. Entspricht der Einstellung Audiomodus im "
+"Hauptfenster."
 
 #: src/ui/manual-dialog.blp:50
 msgid "Press four times"
@@ -413,7 +460,9 @@ msgstr "3 Sekunden halten"
 msgid ""
 "Start pairing. The LED alternates red and white while it looks for "
 "headphones."
-msgstr "Kopplung starten. Die LED wechselt zwischen Rot und Weiß, während sie nach Kopfhörern sucht."
+msgstr ""
+"Kopplung starten. Die LED wechselt zwischen Rot und Weiß, während sie nach "
+"Kopfhörern sucht."
 
 #: src/ui/manual-dialog.blp:62
 msgid "Hold for 10 seconds"
@@ -421,9 +470,10 @@ msgstr "10 Sekunden halten"
 
 #: src/ui/manual-dialog.blp:63
 msgid "Reset to factory settings. The LED flashes pink 3× when it is done."
-msgstr "Auf Werkseinstellungen zurücksetzen. Die LED blinkt zum Abschluss 3× rosa."
+msgstr ""
+"Auf Werkseinstellungen zurücksetzen. Die LED blinkt zum Abschluss 3× rosa."
 
-#: src/ui/manual-dialog.blp:73 src/ui/window.vala:135
+#: src/ui/manual-dialog.blp:73 src/ui/window.vala:150
 msgid "Pairing"
 msgstr "Kopplung"
 
@@ -435,7 +485,9 @@ msgstr "Der Dongle merkt sich genau ein Paar Kopfhörer"
 msgid ""
 "Pairing with a new pair overwrites the old one. There is no list to choose "
 "from, and nothing to delete."
-msgstr "Eine neue Kopplung überschreibt die alte. Es gibt keine Liste zur Auswahl und nichts zu löschen."
+msgstr ""
+"Eine neue Kopplung überschreibt die alte. Es gibt keine Liste zur Auswahl "
+"und nichts zu löschen."
 
 #: src/ui/manual-dialog.blp:82
 msgid "It reconnects on its own"
@@ -445,7 +497,9 @@ msgstr "Er verbindet sich von selbst wieder"
 msgid ""
 "Plug it into any computer and it searches for its remembered headphones for "
 "about 20 seconds."
-msgstr "Stecken Sie ihn in einen beliebigen Rechner: Er sucht etwa 20 Sekunden lang nach den gemerkten Kopfhörern."
+msgstr ""
+"Stecken Sie ihn in einen beliebigen Rechner: Er sucht etwa 20 Sekunden lang "
+"nach den gemerkten Kopfhörern."
 
 #: src/ui/manual-dialog.blp:93
 msgid "Codecs"
@@ -459,7 +513,9 @@ msgstr "Der Dongle wählt den besten, den beide Seiten unterstützen"
 msgid ""
 "In descending order: LC3, aptX Adaptive, aptX Lossless, aptX Classic, SBC. "
 "The Codec setting lets you override that choice."
-msgstr "In absteigender Reihenfolge: LC3, aptX Adaptive, aptX Lossless, aptX Classic, SBC. Die Einstellung Codec überschreibt diese Wahl."
+msgstr ""
+"In absteigender Reihenfolge: LC3, aptX Adaptive, aptX Lossless, aptX "
+"Classic, SBC. Die Einstellung Codec überschreibt diese Wahl."
 
 #: src/ui/manual-dialog.blp:107
 msgid "Good to Know"
@@ -474,7 +530,10 @@ msgid ""
 "The dongle refuses to switch between high quality, gaming and broadcasting "
 "unless it is actively streaming audio. Start playback first, then change the "
 "mode."
-msgstr "Der Dongle weigert sich, zwischen hoher Qualität, Spielen und Übertragung zu wechseln, solange er nicht tatsächlich Audio überträgt. Starten Sie zuerst die Wiedergabe und ändern Sie dann den Modus."
+msgstr ""
+"Der Dongle weigert sich, zwischen hoher Qualität, Spielen und Übertragung zu "
+"wechseln, solange er nicht tatsächlich Audio überträgt. Starten Sie zuerst "
+"die Wiedergabe und ändern Sie dann den Modus."
 
 #: src/ui/manual-dialog.blp:116
 msgid "Permission is needed to reach the dongle"
@@ -485,7 +544,10 @@ msgid ""
 "Appairée cannot talk to the dongle until the file 99-btd700.rules, which "
 "ships with Appairée, is copied into /etc/udev/rules.d. Without it, the "
 "dongle is never found even when it is plugged in."
-msgstr "Appairée kann nicht mit dem Dongle sprechen, solange die Datei 99-btd700.rules, die Appairée mitbringt, nicht nach /etc/udev/rules.d kopiert wurde. Ohne sie wird der Dongle nie gefunden, auch wenn er eingesteckt ist."
+msgstr ""
+"Appairée kann nicht mit dem Dongle sprechen, solange die Datei 99-"
+"btd700.rules, die Appairée mitbringt, nicht nach /etc/udev/rules.d kopiert "
+"wurde. Ohne sie wird der Dongle nie gefunden, auch wenn er eingesteckt ist."
 
 #: src/ui/manual-dialog.blp:122
 msgid "Range"
@@ -495,7 +557,9 @@ msgstr "Reichweite"
 msgid ""
 "The manual contradicts itself: up to 10 metres line of sight on one page, up "
 "to 50 metres in the specifications on another."
-msgstr "Das Handbuch widerspricht sich: bis zu 10 Meter bei Sichtverbindung auf der einen Seite, bis zu 50 Meter in den technischen Daten auf der anderen."
+msgstr ""
+"Das Handbuch widerspricht sich: bis zu 10 Meter bei Sichtverbindung auf der "
+"einen Seite, bis zu 50 Meter in den technischen Daten auf der anderen."
 
 #: src/ui/manual-dialog.blp:128
 msgid "No driver is needed for sound"
@@ -505,7 +569,9 @@ msgstr "Für den Ton wird kein Treiber benötigt"
 msgid ""
 "Linux already treats the dongle as a USB sound card. Appairée only changes "
 "settings stored inside it."
-msgstr "Linux behandelt den Dongle bereits als USB-Soundkarte. Appairée ändert nur die darin gespeicherten Einstellungen."
+msgstr ""
+"Linux behandelt den Dongle bereits als USB-Soundkarte. Appairée ändert nur "
+"die darin gespeicherten Einstellungen."
 
 #: src/ui/manual-dialog.vala:50
 msgid "The dongle is showing this right now"
@@ -519,7 +585,7 @@ msgstr "Hauptmenü"
 msgid "No Dongle Found"
 msgstr "Kein Dongle gefunden"
 
-#: src/ui/window.blp:30 src/ui/window.vala:222
+#: src/ui/window.blp:30 src/ui/window.vala:283
 msgid "Plug in a Sennheiser BTD 700 and it will appear here."
 msgstr "Stecken Sie einen Sennheiser BTD 700 ein, dann erscheint er hier."
 
@@ -528,9 +594,13 @@ msgid ""
 "If it is already plugged in, Appairée is not allowed to open it. Linux needs "
 "a udev rule for that, and no application can install one for itself. Run "
 "this once, then unplug and replug the dongle:"
-msgstr "Wenn er bereits eingesteckt ist, darf Appairée ihn nicht öffnen. Linux verlangt dafür eine udev-Regel, und keine Anwendung kann sich selbst eine installieren. Führen Sie dies einmal aus und stecken Sie den Dongle dann aus und wieder ein:"
+msgstr ""
+"Wenn er bereits eingesteckt ist, darf Appairée ihn nicht öffnen. Linux "
+"verlangt dafür eine udev-Regel, und keine Anwendung kann sich selbst eine "
+"installieren. Führen Sie dies einmal aus und stecken Sie den Dongle dann aus "
+"und wieder ein:"
 
-#: src/ui/window.blp:60 src/ui/window.vala:253
+#: src/ui/window.blp:60 src/ui/window.vala:333
 msgid "Copy Command"
 msgstr "Befehl kopieren"
 
@@ -538,7 +608,9 @@ msgstr "Befehl kopieren"
 msgid ""
 "The dongle ignored that. Its audio mode can only be changed while sound is "
 "playing through it."
-msgstr "Der Dongle hat das ignoriert. Sein Audiomodus lässt sich nur ändern, während Ton über ihn läuft."
+msgstr ""
+"Der Dongle hat das ignoriert. Sein Audiomodus lässt sich nur ändern, während "
+"Ton über ihn läuft."
 
 #: src/ui/window.blp:85
 msgid "Status Light"
@@ -559,7 +631,9 @@ msgstr "Einstellungen"
 #: src/ui/window.blp:110
 msgid ""
 "Stored in the dongle itself, so they follow it from one computer to another."
-msgstr "Im Dongle selbst gespeichert, sie folgen ihm also von einem Rechner zum nächsten."
+msgstr ""
+"Im Dongle selbst gespeichert, sie folgen ihm also von einem Rechner zum "
+"nächsten."
 
 #: src/ui/window.blp:113
 msgid "Audio Mode"
@@ -569,7 +643,9 @@ msgstr "Audiomodus"
 msgid ""
 "High Quality, Gaming for low latency, or Auracast Broadcasting to several "
 "headphones at once."
-msgstr "Hohe Qualität, Spiele für geringe Latenz, oder Auracast-Übertragung an mehrere Kopfhörer gleichzeitig."
+msgstr ""
+"Hohe Qualität, Spiele für geringe Latenz, oder Auracast-Übertragung an "
+"mehrere Kopfhörer gleichzeitig."
 
 #: src/ui/window.blp:123
 msgid "High Quality"
@@ -591,85 +667,120 @@ msgstr "Codec"
 msgid "Only codecs your headphones also support are listed."
 msgstr "Es werden nur Codecs aufgeführt, die auch Ihre Kopfhörer unterstützen."
 
-#: src/ui/window.blp:142
+#: src/ui/window.blp:141
+msgid "Volume"
+msgstr "Lautstärke"
+
+#: src/ui/window.blp:147
+msgid ""
+"The dongle's own output level, sent to it over USB. Decibels are the scale "
+"the dongle itself reports."
+msgstr ""
+"Der Ausgangspegel des Dongles selbst, per USB an ihn gesendet. Dezibel ist "
+"die Skala, die der Dongle meldet."
+
+#: src/ui/window.blp:165
 msgid "Status"
 msgstr "Status"
 
-#: src/ui/window.blp:147
+#: src/ui/window.blp:170
 msgid "Read from the dongle. These cannot be changed here."
 msgstr "Vom Dongle gelesen. Diese Werte lassen sich hier nicht ändern."
 
-#: src/ui/window.blp:150
+#: src/ui/window.blp:173
 msgid "Connection"
 msgstr "Verbindung"
 
-#: src/ui/window.blp:156
+#: src/ui/window.blp:179
 msgid ""
 "Disconnected, Connected when paired but idle, Streaming Audio while music is "
 "playing, or Streaming Voice during a call."
-msgstr "Getrennt, Verbunden wenn gekoppelt aber untätig, Audioübertragung während Musik läuft, oder Sprachübertragung während eines Anrufs."
+msgstr ""
+"Getrennt, Verbunden wenn gekoppelt aber untätig, Audioübertragung während "
+"Musik läuft, oder Sprachübertragung während eines Anrufs."
 
-#: src/ui/window.blp:163
+#: src/ui/window.blp:186
 msgid "LE Audio"
 msgstr "LE Audio"
 
-#: src/ui/window.blp:169
+#: src/ui/window.blp:192
 msgid ""
 "The newer Bluetooth Low Energy audio path: Disconnected, Connected, "
 "Streaming Unicast to your headphones, or Streaming Broadcast for Auracast."
-msgstr "Der neuere Bluetooth-Low-Energy-Audioweg: Getrennt, Verbunden, Unicast-Übertragung an Ihre Kopfhörer, oder Broadcast-Übertragung für Auracast."
+msgstr ""
+"Der neuere Bluetooth-Low-Energy-Audioweg: Getrennt, Verbunden, Unicast-"
+"Übertragung an Ihre Kopfhörer, oder Broadcast-Übertragung für Auracast."
 
-#: src/ui/window.blp:176
+#: src/ui/window.blp:199
 msgid "Bluetooth Mode"
 msgstr "Bluetooth-Modus"
 
-#: src/ui/window.blp:182
+#: src/ui/window.blp:205
 msgid ""
 "Which radio link is carrying the sound: Classic, LE Audio, or Multipoint for "
 "two devices at once. The dongle decides this itself and it cannot be forced."
-msgstr "Welche Funkverbindung den Ton trägt: Classic, LE Audio, oder Multipoint für zwei Geräte gleichzeitig. Der Dongle entscheidet das selbst, es lässt sich nicht erzwingen."
+msgstr ""
+"Welche Funkverbindung den Ton trägt: Classic, LE Audio, oder Multipoint für "
+"zwei Geräte gleichzeitig. Der Dongle entscheidet das selbst, es lässt sich "
+"nicht erzwingen."
 
-#: src/ui/window.blp:189
+#: src/ui/window.blp:212
 msgid "Audio Sink"
 msgstr "Audioausgang"
 
-#: src/ui/window.blp:195
+#: src/ui/window.blp:218
 msgid ""
 "Which paths the dongle is offering to headphones right now: Classic, LE "
 "Audio, Dual for both at once, or Not Available when nothing is connected."
-msgstr "Welche Wege der Dongle Kopfhörern gerade anbietet: Classic, LE Audio, Dual für beide gleichzeitig, oder Nicht verfügbar, wenn nichts verbunden ist."
+msgstr ""
+"Welche Wege der Dongle Kopfhörern gerade anbietet: Classic, LE Audio, Dual "
+"für beide gleichzeitig, oder Nicht verfügbar, wenn nichts verbunden ist."
 
-#: src/ui/window.blp:202
+#: src/ui/window.blp:225
 msgid "Quality"
 msgstr "Qualität"
 
-#: src/ui/window.blp:208
+#: src/ui/window.blp:231
 msgid ""
 "The sample rate and bit depth this computer is sending to the dongle: 44.1, "
 "48 or 96 kHz, at 16 or 24 bits."
-msgstr "Abtastrate und Bittiefe, die dieser Rechner an den Dongle sendet: 44,1, 48 oder 96 kHz, mit 16 oder 24 Bit."
+msgstr ""
+"Abtastrate und Bittiefe, die dieser Rechner an den Dongle sendet: 44,1, 48 "
+"oder 96 kHz, mit 16 oder 24 Bit."
 
-#: src/ui/window.blp:235
+#: src/ui/window.blp:258
 msgid "Language"
 msgstr "Sprache"
 
-#: src/ui/window.blp:278
+#: src/ui/window.blp:301
 msgid "_About Appairée"
 msgstr "_Info zu Appairée"
 
-#: src/ui/window.vala:171
+#: src/ui/window.vala:186
 msgid "No dongle connected"
 msgstr "Kein Dongle verbunden"
 
-#: src/ui/window.vala:172
+#: src/ui/window.vala:187
 msgid "The light cannot be read in this state"
 msgstr "Das Licht lässt sich in diesem Zustand nicht ablesen"
 
-#: src/ui/window.vala:225
+#: src/ui/window.vala:260
+#, c-format
+msgid "%.2f dB"
+msgstr "%.2f dB"
+
+#: src/ui/window.vala:286
 #, c-format
 msgid "The dongle could not be opened: %s"
 msgstr "Der Dongle konnte nicht geöffnet werden: %s"
 
-#: src/ui/window.vala:251
+#: src/ui/window.vala:331
 msgid "Copied"
 msgstr "Kopiert"
+
+#~ msgid "Adds a volume slider for the dongle's own output level."
+#~ msgstr ""
+#~ "Fügt einen Lautstärkeregler für den Ausgangspegel des Dongles hinzu."
+
+#~ msgid "Output Level"
+#~ msgstr "Ausgangspegel"

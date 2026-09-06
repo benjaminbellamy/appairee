@@ -22,6 +22,7 @@ BuildRequires:  pkgconfig(gtk4) >= 4.10
 BuildRequires:  pkgconfig(libadwaita-1) >= 1.5
 BuildRequires:  pkgconfig(glib-2.0) >= 2.74
 BuildRequires:  pkgconfig(hidapi-hidraw)
+BuildRequires:  pkgconfig(alsa)
 
 %description
 The Sennheiser BTD 700 needs no driver on Linux: it appears as an ordinary

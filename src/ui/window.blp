@@ -136,6 +136,29 @@ template $AppaireeWindow: Adw.ApplicationWindow {
                 }
                 tooltip-text: _("Only codecs your headphones also support are listed.");
               }
+
+              Adw.ActionRow volume_row {
+                title: _("Volume");
+
+                [prefix]
+                Image {
+                  icon-name: "audio-volume-high-symbolic";
+                }
+                tooltip-text: _("The dongle's own output level, sent to it over USB. Decibels are the scale the dongle itself reports.");
+
+                [suffix]
+                Scale volume_scale {
+                  valign: center;
+                  width-request: 200;
+                  draw-value: false;
+                  digits: 0;
+
+                  adjustment: Adjustment {
+                    step-increment: 1;
+                    page-increment: 1;
+                  };
+                }
+              }
             }
 
             Adw.PreferencesGroup {

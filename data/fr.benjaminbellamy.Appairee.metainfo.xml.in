@@ -36,6 +36,7 @@
     <ul>
       <li>Audio mode: high quality, gaming (low latency) or Auracast broadcasting</li>
       <li>Bluetooth codec selection among those the dongle supports</li>
+      <li>Volume: the dongle's own output level, in the decibel steps it reports</li>
       <li>Device information: model, serial number, firmware version and live state</li>
       <li>The complete status LED colour legend, with the current state highlighted</li>
       <li>A help page summarising the manual's button gestures</li>
@@ -54,7 +55,7 @@
 
   <screenshots>
     <screenshot type="default">
-      <caption>The status light, the two settings, and what the dongle reports</caption>
+      <caption>The status light, the settings, and what the dongle reports</caption>
       <image>https://raw.githubusercontent.com/benjaminbellamy/appairee/main/data/screenshots/main-window.png</image>
     </screenshot>
   </screenshots>

@@ -61,16 +61,45 @@ namespace Appairee {
         }
     }
 
+    /* The dongle's playback volume, which is not part of the HID protocol.
+     * It is a USB audio control on the dongle's own feature unit, reached
+     * through ALSA, so it is read on its own schedule rather than folded into
+     * a Snapshot: a mixer read is a cheap ioctl where every value in a Snapshot
+     * costs a HID command that can block for a second. */
+    public class VolumeState : Object {
+        public bool available;
+
+        /* The device's own step and its own bounds. Nothing here is a
+         * percentage; the window shows these numbers as they arrive. */
+        public long value;
+        public long min;
+        public long max;
+
+        /* What each step from min to max is worth in hundredths of a decibel,
+         * asked of the device once. Carried with the state so that the window
+         * can label the slider without touching ALSA off the worker thread. */
+        public long[] millibels;
+
+        public bool same_as (VolumeState other) {
+            return available == other.available
+                && value == other.value
+                && min == other.min
+                && max == other.max;
+        }
+    }
+
     private enum RequestKind {
         WAKE,
         SET_MODE,
-        SET_CODEC
+        SET_CODEC,
+        SET_VOLUME
     }
 
     private class Request : Object {
         public RequestKind kind;
         public Btd700.AudioMode mode;
         public Btd700.Codec codec;
+        public long volume;
     }
 
     /* btd700ctl blocks for up to a second per command, is not thread safe, and
@@ -84,6 +113,8 @@ namespace Appairee {
         /* The dongle reports success for an audio mode it then ignores, so a
          * rejected change has to be detected by reading it back. */
         public signal void mode_rejected ();
+
+        public signal void volume_updated (VolumeState state);
 
         private const int POLL_TIMEOUT_MS = 200;
 
@@ -101,6 +132,12 @@ namespace Appairee {
 
         private AsyncQueue<Request> requests = new AsyncQueue<Request> ();
         private int stopping = 0;
+
+        /* Worker thread only. snd_mixer is not thread safe, and the decibel
+         * table is built here so that nothing else has to ask ALSA. */
+        private VolumeControl? volume = null;
+        private VolumeState? last_volume = null;
+        private long[] millibels = {};
 
         /* Raised by the library's event callback, which fires both from
          * poll_events and from inside ordinary commands. Destroying a driver
@@ -140,6 +177,13 @@ namespace Appairee {
             var req = new Request ();
             req.kind = RequestKind.SET_CODEC;
             req.codec = codec;
+            requests.push (req);
+        }
+
+        public void request_volume (long value) {
+            var req = new Request ();
+            req.kind = RequestKind.SET_VOLUME;
+            req.volume = value;
             requests.push (req);
         }
 
@@ -203,6 +247,8 @@ namespace Appairee {
                     }
                 }
 
+                poll_volume ();
+
                 var err = driver.poll_events (POLL_TIMEOUT_MS);
                 if (err == Btd700.Error.ERR_HID || err == Btd700.Error.ERR_DEVICE_NOT_OPEN) {
                     open = false;
@@ -216,10 +262,20 @@ namespace Appairee {
             }
 
             driver.disconnect ();
+            volume = null;
             return true;
         }
 
         private bool apply (Btd700.Driver driver, Request req) {
+            /* Volume lives on the sound card, not in the HID protocol, so this
+             * one neither touches the driver nor invalidates a Snapshot. */
+            if (req.kind == RequestKind.SET_VOLUME) {
+                if (volume != null) {
+                    volume.write (req.volume);
+                }
+                return true;
+            }
+
             var err = Btd700.Error.OK;
 
             if (req.kind == RequestKind.SET_MODE) {
@@ -308,6 +364,67 @@ namespace Appairee {
 
             emit (snapshot);
             return true;
+        }
+
+        private void poll_volume () {
+            if (volume == null) {
+                volume = VolumeControl.open ();
+                if (volume == null) {
+                    emit_volume (new VolumeState ());
+                    return;
+                }
+                millibels = {};
+            }
+
+            long value, min, max;
+            if (!volume.read (out value, out min, out max)) {
+                /* The card goes away with the dongle. Dropping the handle is
+                 * what makes the next pass open a fresh one. */
+                volume = null;
+                millibels = {};
+                emit_volume (new VolumeState ());
+                return;
+            }
+
+            var state = new VolumeState ();
+            state.available = true;
+            state.value = value;
+            state.min = min;
+            state.max = max;
+            state.millibels = decibel_table (min, max);
+
+            emit_volume (state);
+        }
+
+        /* Asked of the device once per handle rather than derived from the
+         * range: the step-to-decibel mapping is the device's to state, not
+         * ours to assume is linear. */
+        private long[] decibel_table (long min, long max) {
+            if (millibels.length == (int) (max - min + 1)) {
+                return millibels;
+            }
+
+            var table = new long[max - min + 1];
+            for (int i = 0; i < table.length; i++) {
+                if (!volume.to_db (min + i, out table[i])) {
+                    return {};
+                }
+            }
+
+            millibels = table;
+            return millibels;
+        }
+
+        private void emit_volume (VolumeState state) {
+            if (last_volume != null && state.same_as (last_volume)) {
+                return;
+            }
+            last_volume = state;
+
+            Idle.add (() => {
+                volume_updated (state);
+                return Source.REMOVE;
+            });
         }
 
         private void emit_absent (Btd700.Error error) {

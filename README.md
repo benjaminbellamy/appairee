@@ -26,11 +26,14 @@ dongle's own firmware*, which Sennheiser exposes only through its Windows and ma
 - **Audio mode** — high quality, gaming (low latency), or Auracast broadcasting
 - **Codec** — SBC, aptX, aptX Adaptive, aptX Lossless, LC3, depending on what the
   dongle and your headphones both support
+- **Volume** — the dongle's own output level, in the decibel steps the dongle reports
 
-These live in the dongle, not on the computer, so they follow it from machine to machine.
+The first two live in the dongle, not on the computer, so they follow it from machine to
+machine. The volume is a control on the dongle's own USB audio interface, sent to it over
+USB rather than stored alongside the settings above.
 
 The main window shows the dongle's **status light** as it looks on the hardware, lit in
-the colour it is showing right now and blinking in the same pattern, above the two
+the colour it is showing right now and blinking in the same pattern, above the
 settings and the live status readings. The window itself stays bare — every row explains
 what it means, and what other values it can take, in its tooltip.
 
@@ -111,7 +114,7 @@ sudo rm /etc/udev/rules.d/99-btd700.rules && sudo udevadm control --reload-rules
 
 ## Building from source
 
-Needs `gtk4`, `libadwaita-1`, `hidapi-hidraw`, `blueprint-compiler` and `meson`.
+Needs `gtk4`, `libadwaita-1`, `hidapi-hidraw`, `alsa`, `blueprint-compiler` and `meson`.
 Nothing else — btd700ctl is built from the vendored copy under `src/btd700ctl/`.
 
 ```bash

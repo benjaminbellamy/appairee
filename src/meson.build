@@ -2,6 +2,7 @@ appairee_sources = files(
   'config.vapi',
   'btd700.vapi',
   'appairee-intl.vapi',
+  'appairee-volume.vapi',
   'main.vala',
   'application.vala',
   'device.vala',
@@ -22,6 +23,12 @@ cc = meson.get_compiler('c')
 # sees; the Vala side talks to btd700ctl through btd700.vapi and never mentions
 # hidapi at all.
 hidapi_dep = cc.find_library('hidapi-hidraw')
+
+# libasound is found by name for the link, for the same reason as hidapi above.
+# Vala does ship an alsa.vapi, so dependency('alsa') here would not break the
+# build the way hidapi did, but it would put a second, incomplete binding in
+# front of valac. The Vala side talks to ALSA only through appairee-volume.vapi.
+asound_dep = cc.find_library('asound')
 
 # fmod() in the LED animation.
 m_dep = cc.find_library('m', required: false)
@@ -46,6 +53,7 @@ appairee_deps = [
   dependency('gtk4', version: '>= 4.10'),
   dependency('libadwaita-1', version: '>= 1.5'),
   hidapi_dep,
+  asound_dep,
   m_dep,
 ]
 
@@ -54,6 +62,11 @@ appairee_deps = [
 appairee_shim = static_library(
   'appairee-shim',
   'appairee-intl.c',
+  'appairee-volume.c',
+  dependencies: [
+    dependency('glib-2.0'),
+    dependency('alsa'),
+  ],
   include_directories: config_inc,
 )
 
