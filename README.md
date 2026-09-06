@@ -56,7 +56,7 @@ time: install it, plug in the dongle, done. Nothing to copy and nothing to confi
 
 ```bash
 curl -L -o /tmp/appairee.deb \
-    https://github.com/benjaminbellamy/appairee/releases/download/1.0.0/appairee_1.0.0_amd64.deb \
+    https://github.com/benjaminbellamy/appairee/releases/download/1.1.0/appairee_1.1.0_amd64.deb \
     && sudo apt install /tmp/appairee.deb
 ```
 
@@ -66,7 +66,7 @@ Same bargain as the Debian package: the udev rule comes with it.
 
 ```bash
 curl -L -o /tmp/appairee.rpm \
-    https://github.com/benjaminbellamy/appairee/releases/download/1.0.0/appairee-1.0.0-1.fc44.x86_64.rpm \
+    https://github.com/benjaminbellamy/appairee/releases/download/1.1.0/appairee-1.1.0-1.fc44.x86_64.rpm \
     && sudo dnf install /tmp/appairee.rpm
 ```
 
@@ -78,7 +78,7 @@ with the right path already filled in, when it cannot reach the dongle.
 
 ```bash
 curl -L -o /tmp/appairee.flatpak \
-    https://github.com/benjaminbellamy/appairee/releases/download/1.0.0/appairee-1.0.0.flatpak \
+    https://github.com/benjaminbellamy/appairee/releases/download/1.1.0/appairee-1.1.0.flatpak \
     && flatpak install --user --bundle /tmp/appairee.flatpak
 ```
 
