@@ -1,9 +1,11 @@
 /* Binding for the ALSA mixer shim in appairee-volume.c.
  *
- * Vala ships an alsa.vapi, but it cannot express this: ElemId has no setters,
- * so a control cannot be addressed by name or numid, ElemInfo exposes no range,
- * and snd_mixer_handle_events is absent, which leaves the cached mixer values
- * frozen. The shim does the ALSA work in C and hands back plain numbers. */
+ * Vala's alsa.vapi does bind most of the simple mixer API, but not
+ * snd_mixer_handle_events, and without that call the cached element values
+ * never refresh, so a level changed anywhere else on the machine stays
+ * invisible. Rather than bind the one missing call and then drive alsa-lib's
+ * compact classes from Vala, the shim keeps card discovery, element selection
+ * and mixer ownership in C and hands back plain numbers. */
 
 [CCode (cheader_filename = "appairee-volume.h")]
 namespace Appairee {

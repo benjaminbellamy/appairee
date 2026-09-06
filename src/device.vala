@@ -138,6 +138,7 @@ namespace Appairee {
         private VolumeControl? volume = null;
         private VolumeState? last_volume = null;
         private long[] millibels = {};
+        private int volume_retry_ticks = 0;
 
         /* Raised by the library's event callback, which fires both from
          * poll_events and from inside ordinary commands. Destroying a driver
@@ -368,22 +369,29 @@ namespace Appairee {
 
         private void poll_volume () {
             if (volume == null) {
-                volume = VolumeControl.open ();
-                if (volume == null) {
-                    emit_volume (new VolumeState ());
+                /* Opening scans every card under /proc/asound, so a failure is
+                 * retried on the slow tick rather than five times a second for
+                 * as long as the card is missing. */
+                if (volume_retry_ticks > 0) {
+                    volume_retry_ticks--;
                     return;
                 }
-                millibels = {};
+                volume = VolumeControl.open ();
             }
 
-            long value, min, max;
-            if (!volume.read (out value, out min, out max)) {
+            long value = 0, min = 0, max = 0;
+            if (volume == null || !volume.read (out value, out min, out max)) {
                 /* The card goes away with the dongle. Dropping the handle is
-                 * what makes the next pass open a fresh one. */
+                 * what makes a later pass open a fresh one. */
                 volume = null;
                 millibels = {};
+                volume_retry_ticks = REFRESH_TICKS;
                 emit_volume (new VolumeState ());
                 return;
+            }
+
+            if (millibels.length == 0) {
+                millibels = decibel_table (min, max);
             }
 
             var state = new VolumeState ();
@@ -391,7 +399,7 @@ namespace Appairee {
             state.value = value;
             state.min = min;
             state.max = max;
-            state.millibels = decibel_table (min, max);
+            state.millibels = millibels;
 
             emit_volume (state);
         }
@@ -400,19 +408,13 @@ namespace Appairee {
          * range: the step-to-decibel mapping is the device's to state, not
          * ours to assume is linear. */
         private long[] decibel_table (long min, long max) {
-            if (millibels.length == (int) (max - min + 1)) {
-                return millibels;
-            }
-
             var table = new long[max - min + 1];
             for (int i = 0; i < table.length; i++) {
                 if (!volume.to_db (min + i, out table[i])) {
                     return {};
                 }
             }
-
-            millibels = table;
-            return millibels;
+            return table;
         }
 
         private void emit_volume (VolumeState state) {

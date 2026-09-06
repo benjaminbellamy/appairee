@@ -46,8 +46,12 @@ btd700ctl_lib = static_library(
   c_args: ['-w'],
 )
 
+# Stated once: the shim needs it too, and would otherwise build against an
+# older GLib than the executable requires.
+glib_dep = dependency('glib-2.0', version: '>= 2.74')
+
 appairee_deps = [
-  dependency('glib-2.0', version: '>= 2.74'),
+  glib_dep,
   dependency('gobject-2.0'),
   dependency('gio-2.0'),
   dependency('gtk4', version: '>= 4.10'),
@@ -64,7 +68,7 @@ appairee_shim = static_library(
   'appairee-intl.c',
   'appairee-volume.c',
   dependencies: [
-    dependency('glib-2.0'),
+    glib_dep,
     dependency('alsa'),
   ],
   include_directories: config_inc,

@@ -24,7 +24,13 @@
 
 /* The dongle's USB id, spelled the way /proc/asound/cardN/usbid spells it.
  * Matching on that rather than on the card index, which moves between boots, or
- * on the card name, which is the driver's choice rather than a contract. */
+ * on the card name, which is the driver's choice rather than a contract.
+ *
+ * The same pair lives as BTD700_VENDOR_ID and BTD700_PID in
+ * btd700ctl/protocol_impl.h, and again in data/99-btd700.rules. Neither is
+ * reachable from here: the first is vendored private code this target does not
+ * include, the second is a udev rule. A new product id has to be changed in all
+ * three, and this is the one that fails silently, by finding no card. */
 #define BTD700_USBID "3542:3001"
 
 struct _AppaireeVolume

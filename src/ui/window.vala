@@ -60,10 +60,15 @@ namespace Appairee {
          * reports would immediately be sent back to the dongle as a change. */
         private bool syncing_volume = false;
 
-        /* The decibel figure for each step, as the dongle reports it, indexed
-         * from volume_floor. Kept so the row can be labelled while dragging. */
-        private long[] volume_millibels = {};
-        private long volume_floor = 0;
+        /* Kept whole, like `latest` above, so the row can be labelled from the
+         * dongle's own decibel table while the slider is being dragged. */
+        private VolumeState? latest_volume = null;
+
+        /* The step last handed to the worker. A drag emits far more value
+         * changes than the slider has steps, and they all round to the same
+         * one. Tracks what the dongle reports, so a level changed from
+         * elsewhere is never mistaken for one already sent. */
+        private long volume_sent = long.MIN;
 
         public Window (Gtk.Application app) {
             Object (application: app);
@@ -223,15 +228,17 @@ namespace Appairee {
         private void on_volume_updated (VolumeState state) {
             volume_row.visible = state.available;
             if (!state.available) {
+                latest_volume = null;
                 return;
             }
 
-            volume_millibels = state.millibels;
-            volume_floor = state.min;
+            latest_volume = state;
+            volume_sent = state.value;
 
+            /* The increments come from the Adjustment in the template, and
+             * set_range leaves them alone. */
             syncing_volume = true;
             volume_scale.set_range ((double) state.min, (double) state.max);
-            volume_scale.set_increments (1, 1);
             volume_scale.set_value ((double) state.value);
             syncing_volume = false;
         }
@@ -243,9 +250,10 @@ namespace Appairee {
              * is dragged rather than waiting for the dongle to be read back. */
             volume_row.subtitle = describe_level (step);
 
-            if (syncing_volume) {
+            if (syncing_volume || step == volume_sent) {
                 return;
             }
+            volume_sent = step;
             device.request_volume (step);
         }
 
@@ -253,11 +261,15 @@ namespace Appairee {
          * unit the slider moves in, so neither number is scaled on the way in
          * or on the way out. */
         private string describe_level (long step) {
-            var index = (int) (step - volume_floor);
-            if (index < 0 || index >= volume_millibels.length) {
+            if (latest_volume == null) {
                 return "";
             }
-            return _("%.2f dB").printf (volume_millibels[index] / 100.0);
+
+            var index = (int) (step - latest_volume.min);
+            if (index < 0 || index >= latest_volume.millibels.length) {
+                return "";
+            }
+            return _("%.2f dB").printf (latest_volume.millibels[index] / 100.0);
         }
 
         private void on_codec_selected () {
