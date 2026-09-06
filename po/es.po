@@ -183,6 +183,11 @@ msgid "aptX"
 msgstr "aptX"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:94
+msgid "Adds a volume slider for the dongle's own output level."
+msgstr ""
+"Añade un control deslizante de volumen para el nivel de salida del dongle."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:99
 #, fuzzy
 msgid "First release."
 msgstr "Primera versión de desarrollo."
@@ -779,10 +784,6 @@ msgstr "No se pudo abrir el adaptador: %s"
 #: src/ui/window.vala:331
 msgid "Copied"
 msgstr "Copiado"
-
-#~ msgid "Adds a volume slider for the dongle's own output level."
-#~ msgstr ""
-#~ "Añade un control deslizante de volumen para el nivel de salida del dongle."
 
 #~ msgid "Output Level"
 #~ msgstr "Nivel de salida"

@@ -159,6 +159,10 @@ msgid "aptX"
 msgstr ""
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:94
+msgid "Adds a volume slider for the dongle's own output level."
+msgstr ""
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:99
 msgid "First release."
 msgstr ""
 

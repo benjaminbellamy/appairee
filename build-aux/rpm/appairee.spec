@@ -1,7 +1,7 @@
 %global app_id fr.benjaminbellamy.Appairee
 
 Name:           appairee
-Version:        1.0.0
+Version:        1.1.0
 Release:        1%{?dist}
 Summary:        Settings for the Sennheiser BTD 700 Bluetooth dongle
 
@@ -67,5 +67,8 @@ The dongle protocol is btd700ctl by sobalap, built in.
 %{_udevrulesdir}/60-appairee-btd700.rules
 
 %changelog
+* Sun Sep 06 2026 Benjamin Bellamy <benjamin@castopod.org> - 1.1.0-1
+- Add a volume slider for the dongle's own output level.
+
 * Sat Sep 05 2026 Benjamin Bellamy <benjamin@castopod.org> - 1.0.0-1
 - First release.

@@ -181,6 +181,10 @@ msgid "aptX"
 msgstr "aptX"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:94
+msgid "Adds a volume slider for the dongle's own output level."
+msgstr "Fügt einen Lautstärkeregler für den Ausgangspegel des Dongles hinzu."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:99
 #, fuzzy
 msgid "First release."
 msgstr "Erste Entwicklungsversion."
@@ -777,10 +781,6 @@ msgstr "Der Dongle konnte nicht geöffnet werden: %s"
 #: src/ui/window.vala:331
 msgid "Copied"
 msgstr "Kopiert"
-
-#~ msgid "Adds a volume slider for the dongle's own output level."
-#~ msgstr ""
-#~ "Fügt einen Lautstärkeregler für den Ausgangspegel des Dongles hinzu."
 
 #~ msgid "Output Level"
 #~ msgstr "Ausgangspegel"

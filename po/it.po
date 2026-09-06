@@ -186,6 +186,10 @@ msgid "aptX"
 msgstr "aptX"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:94
+msgid "Adds a volume slider for the dongle's own output level."
+msgstr "Aggiunge un cursore del volume per il livello di uscita del dongle."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:99
 #, fuzzy
 msgid "First release."
 msgstr "Prima versione di sviluppo."
@@ -781,9 +785,6 @@ msgstr "Impossibile aprire la chiavetta: %s"
 #: src/ui/window.vala:331
 msgid "Copied"
 msgstr "Copiato"
-
-#~ msgid "Adds a volume slider for the dongle's own output level."
-#~ msgstr "Aggiunge un cursore del volume per il livello di uscita del dongle."
 
 #~ msgid "Output Level"
 #~ msgstr "Livello di uscita"

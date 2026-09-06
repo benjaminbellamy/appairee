@@ -182,6 +182,10 @@ msgid "aptX"
 msgstr "aptX"
 
 #: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:94
+msgid "Adds a volume slider for the dongle's own output level."
+msgstr "Ajoute un curseur de volume pour le niveau de sortie du dongle."
+
+#: data/fr.benjaminbellamy.Appairee.metainfo.xml.in:99
 #, fuzzy
 msgid "First release."
 msgstr "Première version de développement."
@@ -778,9 +782,6 @@ msgstr "Impossible d'ouvrir le dongle : %s"
 #: src/ui/window.vala:331
 msgid "Copied"
 msgstr "Copié"
-
-#~ msgid "Adds a volume slider for the dongle's own output level."
-#~ msgstr "Ajoute un curseur de volume pour le niveau de sortie du dongle."
 
 #~ msgid "Output Level"
 #~ msgstr "Niveau de sortie"

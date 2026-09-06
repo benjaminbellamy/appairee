@@ -89,6 +89,11 @@
   </requires>
 
   <releases>
+    <release version="1.1.0" date="2026-09-06">
+      <description>
+        <p>Adds a volume slider for the dongle's own output level.</p>
+      </description>
+    </release>
     <release version="1.0.0" date="2026-09-05">
       <description>
         <p>First release.</p>
